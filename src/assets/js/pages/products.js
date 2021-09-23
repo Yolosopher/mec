@@ -16,9 +16,7 @@ const tabSwitcher = () => {
     let activeToggleElement = document.querySelector('.filters__list__item.toggled')
     if (!activeToggleElement) {
         allfiltersDiv.removeAttribute('data-filterid')
-        setTimeout(() => {
-            filtersForm.classList.remove('toggled')
-        }, 100);
+        filtersForm.classList.remove('toggled')
     } else {
         filtersForm.classList.add('toggled')
         allfiltersDiv.dataset.filterid = activeToggleElement.dataset.filterid

@@ -1,0 +1,119 @@
+.weekoffer
+	&__combiner
+		border-top: 1px solid $borderLight
+		border-bottom: 1px solid $borderLight
+		display: grid
+		grid-gap: 20px
+		width: 100%
+		@include plus1025()
+			grid-template-columns: 32.7% 1fr
+			height: $weekOfferHeight
+			grid-gap: 0
+			// overflow: hidden
+			// height: 100%
+			align-items: stretch
+
+	&__slider
+		width: 100vw
+		@include plus1025()
+			width: 100%
+			border-right: 1px solid $borderLight
+			height: $weekOfferHeight
+		&__container
+			width: 100%
+			@include plus1025()
+				height: $weekOfferHeight
+		&__wrapper
+			width: 100%
+			@include plus1025()
+				height: $weekOfferHeight
+
+		&__slide
+			width: 100%
+			text-align: center
+			padding: 20px
+			@include plus1025()
+				height: $weekOfferHeight
+			&__imgbox
+				width: 100%
+				height: 300px
+				margin: 0 auto
+				margin-bottom: 16px
+				padding: 0 25px
+				@include plus1025()
+					max-width: 320px
+					padding: 0
+				img
+					height: 100%
+					object-fit: contain
+					// width: 100%
+					// ob
+			&__title
+				font-family: firagosemibold
+				font-weight: 600
+				color: $dark
+				margin-bottom: 16px
+				@include font(22px, 30.8px)
+			&__price
+				font-family: firagobold
+				font-weight: 700
+				color: $dark
+				margin-bottom: 20px
+				@include font(16px, 22.4px)
+				
+			&__link
+				margin: 0 auto
+		&__nav
+			&__left, &__right
+				position: absolute
+				top: 153px
+				z-index: 1
+				width: 34px
+				height: 34px
+				cursor: pointer
+				opacity: 1
+				@include transition()
+				
+				&::after
+					display: inline-block
+					width: 100%
+					height: 100%
+				&.disabled
+					opacity: .3
+			&__left
+				left: 10px
+				@include plus1025()
+					left: 40px
+				&::after
+					content: url(../img/svgs/offer-left.svg)
+				
+			&__right
+				right: 10px
+				@include plus1025()
+					right: 20px
+				&::after
+					content: url(../img/svgs/offer-right.svg)
+	&__cover
+		display: flex
+		width: 100%
+		padding: 20px
+		height: 164px
+		padding-top: 21px
+		border-top: 1px solid $borderLight
+		@include plus700()
+			height: 300px
+		@include plus1025()
+			border: none
+			padding: 20px
+			height: 100%
+		&::after
+			display: flex
+			width: 100%
+			height: 100%
+			box-sizing: border-box
+			content: ''
+			background: url(../img/heroslider/2.png) no-repeat
+			background-size: cover
+			background-position: 50% 50%
+			// backgroun
+			// background-size: cover

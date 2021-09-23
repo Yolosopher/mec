@@ -1,0 +1,53 @@
+.newproducts
+	&__list
+		width: 100%
+		border-top: 1px solid $borderLight
+		display: grid
+		height: max-content
+		grid-template-columns: repeat(2, 1fr)
+		@include plus1025()
+			grid-template-columns: repeat(4, 1fr)
+		&__item
+			text-align: center
+			height: $newproductsHeightMob
+			padding: 20px
+			border-bottom: 1px solid $borderLight
+			border-right: 1px solid $borderLight
+			@include plus1025()
+				height: $newproductsHeight
+			&__imgbox
+				width: 100%
+				margin-bottom: 16px
+				height: 148px
+				@include plus1025()
+					height: 300px
+			&__title
+				font-family: firagobold
+				font-weight: 700
+				color: $dark
+				@include maxcolumn(1)
+				
+				margin-bottom: 8px
+				@include font(14px)
+				@include plus1025()
+					@include font(22px, 30.8px)
+
+			&__price
+				display: flex
+				align-items: center
+				width: max-content
+				margin: 0 auto
+				margin-bottom: 30px
+				@include font(16px, 22.4px)
+				
+				.discount
+					display: inline-block
+					@include font(12px, 22.4px)
+					margin-right: 10px
+					opacity: .3
+					text-decoration: line-through
+					@include plus1025()
+						@include font(16px, 22.4px)
+
+			&__link
+				margin: 0 auto

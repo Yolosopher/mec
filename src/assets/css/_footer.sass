@@ -1,0 +1,46 @@
+.footer
+	@include center()
+	height: 105px
+	width: 100%
+	border-top: 1px solid $borderLight
+	@include plus1025()
+		justify-content: space-between
+	&__nav
+		display: none
+		width: max-content
+
+		@include plus1025()
+			display: block
+		&__ul
+			display: flex
+			align-items: center
+			li
+				color: $dark
+				display: inline-block
+				@include uppercase()
+				font-family: firagosemibold
+				@include font(14px)
+				display: flex
+				align-items: center
+				width: max-content
+				@include plus1025()
+					padding: 20px
+
+	&__rights
+		font-family: firagobook
+		font-weight: 400
+		display: flex
+		width: max-content
+		align-items: center
+		@include font(14px, 19.6px)
+		color: $dark
+		.copy
+			width: 24px
+			height: 24px
+			margin: 0 10px
+			display: inline-block
+			&::after
+				height: 100%
+				width: 100%
+				display: inline-block
+				content: url(../img/svgs/copy.svg)

@@ -49,6 +49,7 @@
 				height: 70px
 				background-color: $bodyBg
 				display: none
+				@include transition()
 				@include plus1025()
 					display: flex
 				span
@@ -56,14 +57,18 @@
 					height: 44px
 					border-radius: 50%
 					background-color: #fff
+					@include transition()
 					@include center()
 					svg
 						display: inline-block
 						width: 18px
 						height: 18px
 						path
+							@include transition()
 							fill: $dark13
 				&.disabled
+					opacity: 0
+				&:hover
 					span
 						background-color: $dark
 						svg

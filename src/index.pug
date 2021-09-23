@@ -12,21 +12,58 @@
             title: 'მაგიდა',
             image: 'assets/img/products/1.png',
             quantity: 97,
+            price: 655.25,
+            pricerange: '500-700',
+            discount: 43
         },
         {
             title: 'დეკორატიული თარო',
             image: 'assets/img/products/2.png',
             quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
         },
         {
             title: 'ბავშვის კუთხე',
             image: 'assets/img/products/3.png',
             quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
         },
         {
             title: 'ტელევიზორის სადგამი',
             image: 'assets/img/products/4.png',
             quantity: 125,
+            price: 114.42,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო 2',
+            image: 'assets/img/products/5.png',
+            quantity: 167,
+            price: 714.10,
+            pricerange: '500-700'
+        },
+                {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
         }
     ]
 
@@ -76,11 +113,45 @@ html(lang="en")
                                         img(src=product.image, alt=product.title)
                                     h2.homecategory__slider__slide__title=product.title
                                     p.homecategory__slider__slide__qty=product.quantity + ' პროდუქტი'
-                            each product, i in products
-                                .homecategory__slider__slide.swiper-slide
-                                    .homecategory__slider__slide__imgbox
-                                        img(src=product.image, alt=product.title)
-                                    h2.homecategory__slider__slide__title=product.title
-                                    p.homecategory__slider__slide__qty=product.quantity + ' პროდუქტი'
-                    
+            section.section.weekoffer
+                .section__header.container
+                    h6.section__title კვირის შემოთავაზება
+                .weekoffer__combiner
+                    .weekoffer__slider
+                        .weekoffer__slider__container.swiper-container
+                            .weekoffer__slider__wrapper.swiper-wrapper
+                                each product, i in products
+                                    .weekoffer__slider__slide.swiper-slide
+                                        .weekoffer__slider__slide__imgbox
+                                            img(src=product.image, alt=product.title)
+                                        h3.weekoffer__slider__slide__title=product.title
+                                        p.weekoffer__slider__slide__price=product.price + ' ₾'
+                                        a.weekoffer__slider__slide__link.btn(href="product.html") ნახე პროდუქტი
+                            .weekoffer__slider__nav__left
+                            .weekoffer__slider__nav__right
+                    .weekoffer__cover
+
+            section.section.newproducts
+                .section__header.container
+                    h6.section__title ახალი პროდუქცია
+                ul.newproducts__list
+                    each product, i in products
+                        li.newproducts__list__item
+                            .newproducts__list__item__imgbox
+                                img(src=product.image, alt=product.title)
+                            h3.newproducts__list__item__title=product.title
+                            p.newproducts__list__item__price
+                                if product.discount
+                                    span.discount=product.discount + ' ₾'
+                                span=product.pricerange + ' ₾'
+                            a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი 
+            article.homeabout
+                .homeabout__content
+                    .homeabout__textbox
+                        p ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
+                        p Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია.
+                    a.homeabout__link.btn(href="about.html") გაიგე მეტი ჩვენზე
+                h4.homeabout__title ჩვენ შესახებ
+
+        include ../layouts/_footer
         include ../layouts/_scripts

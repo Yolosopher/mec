@@ -45,3 +45,12 @@ const categorySwiper = new Swiper('.homecategory__slider__container', {
         disabledClass: 'disabled'
     },
 })
+
+const weekOfferSwiper = new Swiper('.weekoffer__slider__container', {
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.weekoffer__slider__nav__right',
+        prevEl: '.weekoffer__slider__nav__left',
+        disabledClass: 'disabled'
+    },
+})

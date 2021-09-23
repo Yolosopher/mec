@@ -1,0 +1,50 @@
+.homeabout
+	width: 100%
+	position: relative
+	height: $homeaboutheightMob
+	margin-bottom: 70px
+	@include plus1025()
+		margin-bottom: 90px
+		height: $homeaboutheight
+	
+	&__content
+		position: absolute
+		z-index: 1
+		left: 0
+		height: 100%
+		width: calc(100% - 60px)
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		background-color: $olive
+		padding: 20px
+		justify-content: space-between
+		@include plus1025()
+			width: calc(100% - 136px)
+	&__textbox
+		*
+			max-width: 434px
+			font-family: firago
+			font-weight: 350
+			@include font(14px, 19.6px)
+			@include plus1025()
+				@include font(16px, 22.4px)
+			
+			color: $dark
+		> * 
+			&:not(:last-child)
+				margin-bottom: 20px
+		max-height: min(100%, calc(100% - #{40px + 54px + 20px}))
+	&__title
+		position: absolute
+		right: -8px
+		top: 50%
+		transform-origin: bottom
+		// transform: rotate(90deg) translateY(-50%)
+		transform: translateY(-50%) rotate(90deg)
+		font-family: firagobold
+		font-weight: 700
+		color: $dark
+		@include font(14px, 19.6px)
+		@include uppercase()
+		

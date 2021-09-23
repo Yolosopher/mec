@@ -127,7 +127,7 @@ export const watchTask = () => {
 	)
 }
 
-export const watchaT = () => {
+export const watcha = () => {
 	cssTaskWatch()
 	jsTaskWatch()
 	renderViewsWatch()

@@ -53,16 +53,35 @@
           <div class="filters__quantity">28 პროდუქტი</div>
         </div>
       </section>
-      <form class="filters__form" action="/filters" method="get">
-        <div class="filters__form__container container">
-          <select name="category">
-            <option value="1">მაგიდა</option>
-            <option value="2" selected>დეკორატიული თარო</option>
-            <option value="3">ბავშვის კუთხე</option>
-            <option value="4">ტელევიზორის სადგამი</option>
-          </select>
-          <div class="filters__form__each multiple" data-filterid="1">
-            <div class="filters__form__each__option"></div>
+      <form class="filters__form container" action="/filters" method="get">
+        <div class="filters__form__allfilters">
+          <div class="filters__form__container">
+            <select name="category" multiple>
+              <option value="1">მაგიდა</option>
+              <option value="2" selected>დეკორატიული თარო</option>
+              <option value="3">ბავშვის კუთხე</option>
+              <option value="4">ტელევიზორის სადგამი</option>
+            </select>
+            <div class="filters__form__each"></div>
+          </div>
+          <div class="filters__form__container">
+            <select name="price">
+              <option value="1">500 ₾ - მდე</option>
+              <option value="2" selected>500 ₾ - 1000 ₾</option>
+              <option value="3">1000 ₾ - 2000 ₾</option>
+              <option value="4">2000 ₾ და ზევით</option>
+              <option value="5">5000 ₾ და ზევით                            </option>
+            </select>
+            <div class="filters__form__each"></div>
+          </div>
+          <div class="filters__form__container">
+            <select id="colorselect" name="color" multiple>
+              <option value="1" data-color="#ba1e22"></option>
+              <option value="2" selected data-color="#6f3495"></option>
+              <option value="3" data-color="#49dfd3"></option>
+              <option value="4" data-color="#84f75e"></option>
+            </select>
+            <div class="filters__form__each"></div>
           </div>
         </div>
         <button class="btn" type="submit">ფილტრი</button>
@@ -121,10 +140,7 @@
         <div class="productsresult__controls container">
           <div class="productsresult__controls__pagination"><a href="product.html">1</a><a href="product.html">2</a><a href="product.html">3</a><a class="active" href="product.html">4</a><a href="product.html">5</a><a href="product.html">6</a><a href="product.html">7</a><a href="product.html">8</a><a href="product.html">9</a><a href="product.html">10</a><a href="product.html">11</a><a href="product.html">12</a><a href="product.html">13</a>
           </div>
-          <div class="productsresult__controls__nav">
-            <div class="productsresult__controls__nav__left"></div>
-            <div class="productsresult__controls__nav__right"></div>
-          </div>
+          <div class="productsresult__controls__nav"><a class="productsresult__controls__nav__left" href="products.html"> </a><a class="productsresult__controls__nav__right" href="products.html"> </a></div>
         </div>
       </section>
     </main>

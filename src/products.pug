@@ -89,15 +89,33 @@ html(lang="en")
                         .filters__list__item(data-filterid="2") ფასი
                         .filters__list__item(data-filterid="3") ფერი
                     .filters__quantity 28 პროდუქტი
-            form.filters__form(action="/filters", method="get")
-                .filters__form__container.container
-                    select(name="category")
-                        option(value="1") მაგიდა
-                        option(value="2", selected) დეკორატიული თარო
-                        option(value="3") ბავშვის კუთხე
-                        option(value="4") ტელევიზორის სადგამი
-                    .filters__form__each(data-filterid="1").multiple
-                        .filters__form__each__option
+            form.filters__form.container(action="/filters", method="get")
+                .filters__form__allfilters
+                    .filters__form__container
+                        select(name="category", multiple)
+                            option(value="1") მაგიდა
+                            option(value="2", selected) დეკორატიული თარო
+                            option(value="3") ბავშვის კუთხე
+                            option(value="4") ტელევიზორის სადგამი
+                        .filters__form__each
+                            //- .filters__form__each__option
+                    .filters__form__container
+                        select(name="price")
+                            option(value="1") 500 ₾ - მდე
+                            option(value="2", selected) 500 ₾ - 1000 ₾
+                            option(value="3") 1000 ₾ - 2000 ₾
+                            option(value="4") 2000 ₾ და ზევით
+                            option(value="5") 5000 ₾ და ზევით                            
+                        .filters__form__each
+                            //- .filters__form__each__option
+                    .filters__form__container
+                        select#colorselect(name="color", multiple)
+                            option(value="1", data-color="#ba1e22")
+                            option(value="2", selected, data-color="#6f3495")
+                            option(value="3", data-color="#49dfd3")
+                            option(value="4", data-color="#84f75e")
+                        .filters__form__each
+                            //- .filters__form__each__option    
                 button.btn(type="submit") ფილტრი
 
 
@@ -118,7 +136,7 @@ html(lang="en")
                         each xxxx, i in Array(13)
                             a(href="product.html", class=(i === 3 && 'active'))=i + 1
                     .productsresult__controls__nav
-                        .productsresult__controls__nav__left
-                        .productsresult__controls__nav__right
+                        a.productsresult__controls__nav__left(href="products.html") 
+                        a.productsresult__controls__nav__right(href="products.html") 
         include ../layouts/_footer
         include ../layouts/_scripts

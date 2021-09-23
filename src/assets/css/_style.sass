@@ -92,60 +92,152 @@ $homeaboutheightMob: 450px
 	@include plus1025()
 		padding-top: 40px
 
-.aboutarticle
-	position: relative
-	width: 100%
-	margin-bottom: 40px
-	@include plus1025()
-		min-height: calc(100vh - #{120px + 20px})
-	&__content
-		margin-bottom: 30px
-		@include plus1025()
-			margin-bottom: 0
-			max-width: min(55%, calc(100% - 612px))
+@import _pageabout
+
+
+.subcat
 	&__title
 		margin-bottom: 20px
-		@include plus1025()
-			margin-bottom: 90px
-
-	&__textbox
-		margin-bottom: 40px
-		@include plus1025()
-			margin-bottom: 200px
-		*
-			font-family: firago
-			font-weight: 350
-			@include font(14px, 19.6px)
+	&__list
+		display: flex
+		align-items: center
+		overflow-x: auto
+		margin-bottom: 30px
+		padding-bottom: 20px
+		li
+			@include center()
+			height: 20px
+			padding: 0 10px
 			color: $dark
-			@include plus1025()
-				@include font(16px, 22.4px)
+			@include font(14px, 19.6px)
+			font-family: firagosemibold
+			font-weight: 600
+			@include uppercase()
 			
-		> *
-			&:not(:last-child)
-				margin-bottom: 20px
-
-	&__cover
+			&:not(:last-of-type)	
+				padding-right: 11px
+				border-right: 1px solid $borderLight
+			a
+				white-space: nowrap
+				&.active
+					text-decoration: underline
+.filters
+	height: 120px
+	@include plus1025()
+		height: 60px
+	position: relative
+	&::after
+		content: ''
+		top: 50%
+		height: 1px
+		width: 100%
 		right: 0
-		top: 62px
-		background: url('../img/admincover.png') no-repeat
-		background-position: center
-		// background-size: 100% 100%
-		background-size: cover
-		height: 500px
+		border-bottom: 1px solid $borderLight
+		z-index: 1
+		position: absolute
+		// transform: translateY(-50%)
 		@include plus1025()
-			position: absolute
-			width: 473px
-			height: 750px
-		&::after
-			content: ''
-			display: inline-block
-			// width: auto
-			height: 100%
-			position: relative
-			z-index: -1
-			background-color: $olive
-			width: 100%
-			top: 5px
-			left: 5px
-			transform: translate(-10px, -10px)
-			// height: auto
+			display: none
+	&__container
+		height: 100%
+		border-top: 1px solid $borderLight
+		// border-bottom: 1px solid $borderLight
+		// flex-direction: column
+		align-items: center
+		display: grid
+		width: 100%
+		grid-template-rows: 1fr 1fr
+		@include plus1025()
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+	&__list
+		display: flex
+		width: max-content
+		margin: 0 auto
+		@include plus1025()
+			margin: 0
+		&__item
+			cursor: pointer
+			display: flex
+			align-items: center
+			&:not(:last-of-type)
+				margin-right: 20px
+			&::after
+				margin-left: 6px
+				display: inline-block
+				width: 16px
+				height: 16px
+				content: url(../img/svgs/plus.svg)
+			&.toggled
+				&::after
+					content: url(../img/svgs/minus.svg)
+
+	&__form
+		background-color: #fff
+		border-top: 1px solid $borderLight
+		select
+			display: none !important
+		.btn
+			cursor: pointer
+			margin: 10px 20px
+			color: #fff !important
+			border-color: $olive !important
+			background-color: $olive !important
+			@include transition()
+			&:hover
+				filter: brightness(1) contrast(1.05)
+	&__quantity
+		color: $dark
+		font-family: firagosemibold
+		@include font(14px)
+		@include uppercase()
+		margin: 0 auto
+		@include plus1025()
+			margin: unset
+.productsresult
+	&__controls
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 106px
+		&__pagination
+			font-family: firagobold
+			font-weight: 700
+			@include font(14px, 17.09px)
+			color: $dark
+			a
+				opacity: .3
+				display: inline-block
+				padding: 10px
+				&:first-child
+					padding-left: 0
+				&.active
+					opacity: 1
+		&__nav
+			display: grid
+			grid-gap: 30px
+			grid-template-columns: auto auto
+			width: max-content
+			align-items: center
+			height: 24px
+			cursor: pointer
+			&__left, &__right
+				display: inline-block
+				width: 24px
+				height: 100%
+				&::after
+					display: inline-block
+					width: 100%
+					height: 100%
+				.disabled
+					opacity: .3
+			&__left
+				content: url(../img/svgs/slider-left.svg)
+			&__right
+				content: url(../img/svgs/slider-right.svg)
+			
+.filters__form__container
+	// 
+	
+

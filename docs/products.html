@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content container"><a class="logo header__logo" href="index.html"><img src="assets/img/logo.svg" alt=""></a>
+        <nav class="nav header__nav">
+          <ul class="header__nav__ul">
+            <li><a href="index.html">მთავარი</a></li>
+            <li class="products">
+              <div class="head"><a href="products.html">პროდუქცია</a><i></i></div>
+              <div class="content">
+                <div class="categories"><a class="categories__item" href="#">მაგიდა</a><a class="categories__item" href="#">დეკორატიული თარო</a><a class="categories__item" href="#">ბავშვის კუთხე</a><a class="categories__item" href="#">ტელევიზორის სადგამი</a></div>
+              </div>
+            </li>
+            <li><a href="about.html">ჩვენ შესახებ</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__burger"><span></span><span></span><span></span></div>
+          <div class="header__lang"><a class="active" href="#ge">GE</a><a href="#en">EN </a></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="subcat container pagearticle">
+        <h1 class="subcat__title pagetitle">მაგიდა</h1>
+        <ul class="subcat__list">
+          <li><a class="active" href="products.html">ყველა</a></li>
+          <li><a href="products.html">ჟურნალის მაგიდა</a></li>
+          <li><a href="products.html">სამზარეულოს მაგიდა</a></li>
+          <li><a href="products.html">აივნის მაგიდა</a></li>
+          <li><a href="products.html">უცნაური მაგიდა</a></li>
+          <li><a href="products.html">იმნაირი მაგიდა</a></li>
+          <li><a href="products.html">ამნაირი მაგიდა</a></li>
+        </ul>
+      </section>
+      <section class="filters">
+        <div class="filters__container container">
+          <div class="filters__list">
+            <div class="filters__list__item" data-filterid="1">კატეგორია</div>
+            <div class="filters__list__item" data-filterid="2">ფასი</div>
+            <div class="filters__list__item" data-filterid="3">ფერი</div>
+          </div>
+          <div class="filters__quantity">28 პროდუქტი</div>
+        </div>
+      </section>
+      <form class="filters__form" action="/filters" method="get">
+        <div class="filters__form__container container">
+          <select name="category">
+            <option value="1">მაგიდა</option>
+            <option value="2" selected>დეკორატიული თარო</option>
+            <option value="3">ბავშვის კუთხე</option>
+            <option value="4">ტელევიზორის სადგამი</option>
+          </select>
+          <div class="filters__form__each multiple" data-filterid="1">
+            <div class="filters__form__each__option"></div>
+          </div>
+        </div>
+        <button class="btn" type="submit">ფილტრი</button>
+      </form>
+      <section class="productsresult">
+        <ul class="newproducts__list">
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/1.png" alt="მაგიდა"></div>
+            <h3 class="newproducts__list__item__title">მაგიდა</h3>
+            <p class="newproducts__list__item__price"><span class="discount">43 ₾</span><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/2.png" alt="დეკორატიული თარო"></div>
+            <h3 class="newproducts__list__item__title">დეკორატიული თარო</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/3.png" alt="ბავშვის კუთხე"></div>
+            <h3 class="newproducts__list__item__title">ბავშვის კუთხე</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/4.png" alt="ტელევიზორის სადგამი"></div>
+            <h3 class="newproducts__list__item__title">ტელევიზორის სადგამი</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/5.png" alt="დეკორატიული თარო 2"></div>
+            <h3 class="newproducts__list__item__title">დეკორატიული თარო 2</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/1.png" alt="მაგიდა"></div>
+            <h3 class="newproducts__list__item__title">მაგიდა</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/2.png" alt="დეკორატიული თარო"></div>
+            <h3 class="newproducts__list__item__title">დეკორატიული თარო</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+          <li class="newproducts__list__item">
+            <div class="newproducts__list__item__imgbox"><img src="assets/img/products/3.png" alt="ბავშვის კუთხე"></div>
+            <h3 class="newproducts__list__item__title">ბავშვის კუთხე</h3>
+            <p class="newproducts__list__item__price"><span>500-700 ₾</span>
+            </p><a class="newproducts__list__item__link btn" href="product.html">ნახე პროდუქტი</a>
+          </li>
+        </ul>
+        <div class="productsresult__controls container">
+          <div class="productsresult__controls__pagination"><a href="product.html">1</a><a href="product.html">2</a><a href="product.html">3</a><a class="active" href="product.html">4</a><a href="product.html">5</a><a href="product.html">6</a><a href="product.html">7</a><a href="product.html">8</a><a href="product.html">9</a><a href="product.html">10</a><a href="product.html">11</a><a href="product.html">12</a><a href="product.html">13</a>
+          </div>
+          <div class="productsresult__controls__nav">
+            <div class="productsresult__controls__nav__left"></div>
+            <div class="productsresult__controls__nav__right"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer container">
+      <nav class="footer__nav">
+        <ul class="footer__nav__ul">
+          <li><a href="index.html">მთავარი</a></li>
+          <li><a href="about.html">ჩვენ შესახებ</a></li>
+          <li><a href="contact.html">კონტაქტი</a></li>
+        </ul>
+      </nav>
+      <div class="footer__rights"><span>All rights reserved</span><span class="copy"></span><span>2021</span></div>
+    </footer>
+    <script src="assets/js/products.min.js"> </script>
+  </body>
+</html>

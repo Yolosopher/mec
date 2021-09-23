@@ -1,0 +1,124 @@
+- const title = 'products'
+-
+    const subcategories = [
+        'ყველა',
+        'ჟურნალის მაგიდა',
+        'სამზარეულოს მაგიდა',
+        'აივნის მაგიდა',
+        'უცნაური მაგიდა',
+        'იმნაირი მაგიდა',
+        'ამნაირი მაგიდა',
+    ]
+-
+    const products = [
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700',
+            discount: 43
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ტელევიზორის სადგამი',
+            image: 'assets/img/products/4.png',
+            quantity: 125,
+            price: 114.42,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო 2',
+            image: 'assets/img/products/5.png',
+            quantity: 167,
+            price: 714.10,
+            pricerange: '500-700'
+        },
+                {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        }
+    ]
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            section.subcat.container.pagearticle
+                h1.subcat__title.pagetitle მაგიდა
+                ul.subcat__list
+                    each subcat, i in subcategories
+                        li
+                            a(class=(i === 0 && 'active'), href="products.html")=subcat
+            section.filters
+                .filters__container.container
+                    .filters__list
+                        .filters__list__item(data-filterid="1") კატეგორია
+                        .filters__list__item(data-filterid="2") ფასი
+                        .filters__list__item(data-filterid="3") ფერი
+                    .filters__quantity 28 პროდუქტი
+            form.filters__form(action="/filters", method="get")
+                .filters__form__container.container
+                    select(name="category")
+                        option(value="1") მაგიდა
+                        option(value="2", selected) დეკორატიული თარო
+                        option(value="3") ბავშვის კუთხე
+                        option(value="4") ტელევიზორის სადგამი
+                    .filters__form__each(data-filterid="1").multiple
+                        .filters__form__each__option
+                button.btn(type="submit") ფილტრი
+
+
+            section.productsresult
+                ul.newproducts__list
+                    each product, i in products
+                        li.newproducts__list__item
+                            .newproducts__list__item__imgbox
+                                img(src=product.image, alt=product.title)
+                            h3.newproducts__list__item__title=product.title
+                            p.newproducts__list__item__price
+                                if product.discount
+                                    span.discount=product.discount + ' ₾'
+                                span=product.pricerange + ' ₾'
+                            a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი
+                .productsresult__controls.container
+                    .productsresult__controls__pagination
+                        each xxxx, i in Array(13)
+                            a(href="product.html", class=(i === 3 && 'active'))=i + 1
+                    .productsresult__controls__nav
+                        .productsresult__controls__nav__left
+                        .productsresult__controls__nav__right
+        include ../layouts/_footer
+        include ../layouts/_scripts

@@ -31,11 +31,6 @@
     box-sizing: border-box
     outline: none
     resize: none
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
     -webkit-tap-highlight-color: transparent
     font-family: firago, sans-serif
     -webkit-font-smoothing: subpixel-antialiased
@@ -44,18 +39,23 @@
     &::after, &::before
         -webkit-font-smoothing: subpixel-antialiased
         backface-visibility: hidden
-        
+    // &:not(html):not(body):not(main):not(header):not(footer):not(div)
+    //     -webkit-touch-callout: none
+    //     -webkit-user-select: none
+    //     -moz-user-select: none
+    //     -ms-user-select: none
+    //     user-select: none
 a
     font-family: inherit
     color: inherit
 
 
 input, input:before, input:after 
-    -webkit-user-select: initial
-    -khtml-user-select: initial
-    -moz-user-select: initial
-    -ms-user-select: initial
-    user-select: initial
+    -webkit-user-select: all
+    -khtml-user-select: all
+    -moz-user-select: all
+    -ms-user-select: all
+    user-select: all
      
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -107,3 +107,9 @@ div.default-ul
     ul li
         list-style: initial
         list-style-position: inside
+
+h1, h2, h3, h4, h5, h6, p
+    @include userselect()
+    span
+        @include userselect()
+    

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>home</title>
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
@@ -30,9 +31,33 @@
         </div>
       </div>
     </header>
-    <main class="container">
-      <h1>hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah </h1>
+    <main>
+      <div class="hero container">
+        <div class="hero__slider">
+          <div class="hero__slider__container swiper-container">
+            <div class="hero__slider__wrapper swiper-wrapper">
+              <div class="hero__slider__slide swiper-slide"><img src="assets/img/heroslider/1.png" alt=""></div>
+              <div class="hero__slider__slide swiper-slide"><img src="assets/img/heroslider/2.png" alt=""></div>
+              <div class="hero__slider__slide swiper-slide"><img src="assets/img/heroslider/3.jpg" alt=""></div>
+              <div class="hero__slider__slide swiper-slide"><img src="assets/img/heroslider/4.jpg" alt=""></div>
+            </div>
+            <div class="hero__slider__nav__left"><span>
+                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.3178 15.5025C11.4603 15.5025 11.6028 15.45 11.7153 15.3375C11.9328 15.12 11.9328 14.76 11.7153 14.5425L6.8253 9.6525C6.4653 9.2925 6.4653 8.7075 6.8253 8.3475L11.7153 3.45751C11.9328 3.24001 11.9328 2.88001 11.7153 2.66251C11.4978 2.44501 11.1378 2.44501 10.9203 2.66251L6.0303 7.5525C5.6478 7.935 5.4303 8.4525 5.4303 9C5.4303 9.5475 5.6403 10.065 6.0303 10.4475L10.9203 15.3375C11.0328 15.4425 11.1753 15.5025 11.3178 15.5025Z" fill="#131313"></path>
+                </svg></span></div>
+            <div class="hero__slider__nav__right"><span>
+                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.68221 2.4975C6.53971 2.4975 6.39721 2.55 6.28471 2.6625C6.06721 2.88 6.06721 3.24 6.28471 3.4575L11.1747 8.3475C11.5347 8.7075 11.5347 9.2925 11.1747 9.6525L6.28471 14.5425C6.06721 14.76 6.06721 15.12 6.28471 15.3375C6.50221 15.555 6.86221 15.555 7.07971 15.3375L11.9697 10.4475C12.3522 10.065 12.5697 9.5475 12.5697 9C12.5697 8.4525 12.3597 7.935 11.9697 7.5525L7.07971 2.6625C6.96721 2.5575 6.82471 2.4975 6.68221 2.4975Z" fill="#131313"></path>
+                </svg></span></div>
+            <div class="hero__slider__pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__text container">
+        <h1 class="hero__text__title">MEC გთავაზობთ <span>მინიმალისტურ,</span> <span>ელეგანტურ</span>და <span>კომფორტულ</span> ავეჯს</h1><a class="hero__seeall btn" href="products.html">პროდუქციის ნახვა</a>
+      </div>
+      <section class="section section__homecategory container"></section>
     </main>
-    <script src="assets/js/bundle.min.js"> </script>
+    <script src="assets/js/home.min.js"> </script>
   </body>
 </html>

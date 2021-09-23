@@ -1,0 +1,29 @@
+// LAYOUTS
+import { burgerFunction } from '../layout/burger';
+import { headerCategory } from '../layout/headerCategory';
+
+window.addEventListener('load', () => {
+    burgerFunction()
+    headerCategory()
+})
+
+
+// HERO SWIPER
+import Swiper, { Navigation, Pagination } from 'swiper'
+Swiper.use([Navigation, Pagination])
+const heroSwiper = new Swiper('.hero__slider__container', {
+	slidesPerView: 1,
+	spaceBetween: 10,
+    navigation: {
+        nextEl: '.hero__slider__nav__right',
+        prevEl: '.hero__slider__nav__left',
+        disabledClass: 'disabled'
+    },
+    pagination: {
+        el: '.hero__slider__pagination',
+        type: 'bullets',
+        bulletClass: 'hero__slider__pagination__bullet',
+        bulletActiveClass: 'active',
+        clickable: true
+    },
+})

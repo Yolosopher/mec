@@ -1,10 +1,44 @@
-- const title = 'Home'
+- const title = 'home'
+-
+    const slides = [
+        'assets/img/heroslider/1.png',
+        'assets/img/heroslider/2.png',
+        'assets/img/heroslider/3.jpg',
+        'assets/img/heroslider/4.jpg',
+    ]
+
+
 doctype html
 html(lang="en")
     head
         include ../layouts/_head
     body
         include ../layouts/_header
-        main.container
-            h1 hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah hahahahah 
+        main
+            .hero.container
+                .hero__slider
+                    .hero__slider__container.swiper-container
+                        .hero__slider__wrapper.swiper-wrapper
+                            each slide, i in slides
+                                .hero__slider__slide.swiper-slide
+                                    img(src=slide, alt="")
+                        .hero__slider__nav__left
+                            span
+                                include ../components/slider-left
+                        .hero__slider__nav__right
+                            span
+                                include ../components/slider-right
+                        .hero__slider__pagination
+            .hero__text.container
+                h1.hero__text__title
+                    | MEC გთავაზობთ 
+                    span მინიმალისტურ,
+                    |  
+                    span ელეგანტურ
+                    | და 
+                    span კომფორტულ
+                    |  ავეჯს
+                a.hero__seeall.btn(href="products.html") პროდუქციის ნახვა
+            section.section.section__homecategory.container
+                
         include ../layouts/_scripts

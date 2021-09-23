@@ -1,0 +1,160 @@
+.hero
+	margin-bottom: 30px
+	@include plus700()
+		height: 444px
+	@include plus1025()
+		height: 144px
+		margin-bottom: 50px
+		height: min(600px, calc(100vh - 140px))
+	&__slider
+		width: 100%
+		height: 144px
+		@include plus700()
+			height: 444px
+		&__container
+			height: 144px
+			@include plus700()
+				height: 444px
+			@include plus1025()
+				height: min(600px, calc(100vh - 140px))
+
+		&__wrapper
+			height: 144px
+			@include plus700()
+				height: 444px
+			@include plus1025()
+				height: min(600px, calc(100vh - 140px))
+
+		&__slide
+			height: 144px
+			@include plus700()
+				height: 444px
+			@include plus1025()
+				height: min(600px, calc(100vh - 140px))
+
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+		&__nav
+			&__left, &__right
+				cursor: pointer
+				z-index: 1
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				@include center()
+				border-radius: 50%
+				width: 70px
+				height: 70px
+				background-color: $bodyBg
+				display: none
+				@include plus1025()
+					display: flex
+				span
+					width: 44px
+					height: 44px
+					border-radius: 50%
+					background-color: #fff
+					@include center()
+					svg
+						display: inline-block
+						width: 18px
+						height: 18px
+						path
+							fill: $dark13
+				&.disabled
+					span
+						background-color: $dark
+						svg
+							path
+								fill: #fff
+			&__left
+				left: 10px
+			&__right
+				right: 10px
+
+		&__pagination
+			z-index: 1
+			position: absolute
+			bottom: 10px !important
+			height: 16px !important
+			left: 50% !important
+			width: max-content !important
+			transform: translateX(-50%)
+			display: flex
+			// ali
+			@include plus1025()
+				bottom: 30px !important
+
+			&__bullet
+				cursor: pointer
+				width: 16px !important
+				height: 100% !important
+				border-radius: 50%
+				background-color: rgba($bodyBg, .3)
+				position: relative
+				// box-shadow: inset 0 0 0 4px #fff 
+				@include center()
+				border: 1px solid transparent
+				
+				&:not(:last-of-type)
+					margin-right: 22px
+
+				&::after
+					content: ''
+					// position: absolute
+					display: inline-block
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					background-color: #fff
+				&.active
+					border: 1px solid $orange
+					&::after
+						background-color: $orange
+
+	&__text
+		margin-bottom: 70px
+		@include plus1025()
+			margin-bottom: 90px
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&__title
+			margin-bottom: 30px
+			font-family: firagobook
+			font-weight: 400
+			@include maxcolumn(3)
+			max-width: 540px
+			text-align: left
+			@include uppercase()
+			color: $dark
+			@include font(18px, 25.2px)
+			
+			@include plus1025()
+				@include font(28px, 39.2px)
+				margin-bottom: 0
+
+			span
+				font-family: firagobold
+				font-weight: 700
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					display: inline-block
+					width: 100%
+					height: 8px
+					background-color: $orange
+					left: 0
+					z-index: -1
+					bottom: 2px
+					@include plus1025()
+						bottom: 4px
+
+	&__seeall
+		@media screen and ( max-width: 700px )
+			background-color: $dark !important
+			color: #fff !important
+

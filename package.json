@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "watch": "gulp watchTask",
+    "start": "gulp watcha",
     "prod": "gulp"
   },
   "keywords": [],

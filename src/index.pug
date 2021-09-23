@@ -6,7 +6,29 @@
         'assets/img/heroslider/3.jpg',
         'assets/img/heroslider/4.jpg',
     ]
-
+-
+    const products = [
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+        },
+        {
+            title: 'ტელევიზორის სადგამი',
+            image: 'assets/img/products/4.png',
+            quantity: 125,
+        }
+    ]
 
 doctype html
 html(lang="en")
@@ -35,10 +57,30 @@ html(lang="en")
                     span მინიმალისტურ,
                     |  
                     span ელეგანტურ
-                    | და 
+                    |  და 
                     span კომფორტულ
                     |  ავეჯს
                 a.hero__seeall.btn(href="products.html") პროდუქციის ნახვა
-            section.section.section__homecategory.container
-                
+            section.section.homecategory
+                .section__header.container
+                    h6.section__title მოძებნე პროდუქტი კატეგორიით
+                    .homecategory__slider__nav
+                        .homecategory__slider__nav__left
+                        .homecategory__slider__nav__right
+                .homecategory__slider
+                    .homecategory__slider__container.swiper-container
+                        .homecategory__slider__wrapper.swiper-wrapper
+                            each product, i in products
+                                .homecategory__slider__slide.swiper-slide
+                                    .homecategory__slider__slide__imgbox
+                                        img(src=product.image, alt=product.title)
+                                    h2.homecategory__slider__slide__title=product.title
+                                    p.homecategory__slider__slide__qty=product.quantity + ' პროდუქტი'
+                            each product, i in products
+                                .homecategory__slider__slide.swiper-slide
+                                    .homecategory__slider__slide__imgbox
+                                        img(src=product.image, alt=product.title)
+                                    h2.homecategory__slider__slide__title=product.title
+                                    p.homecategory__slider__slide__qty=product.quantity + ' პროდუქტი'
+                    
         include ../layouts/_scripts

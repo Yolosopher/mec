@@ -1,0 +1,87 @@
+- const title = 'about'
+-
+    const slides = [
+        'assets/img/heroslider/1.png',
+        'assets/img/heroslider/2.png',
+        'assets/img/heroslider/3.jpg',
+        'assets/img/heroslider/4.jpg',
+    ]
+-
+    const products = [
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700',
+            discount: 43
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ტელევიზორის სადგამი',
+            image: 'assets/img/products/4.png',
+            quantity: 125,
+            price: 114.42,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო 2',
+            image: 'assets/img/products/5.png',
+            quantity: 167,
+            price: 714.10,
+            pricerange: '500-700'
+        },
+                {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        }
+    ]
+
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            article.aboutarticle.container.pagearticle
+                .aboutarticle__content
+                    h1.aboutarticle__title.pagetitle ჩვენ შესახებ
+                    .aboutarticle__textbox
+                        p ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.
+                        p ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია.
+                    a.aboutarticle__link.btn(href="about.html") გაიგე მეტი ჩვენზე
+                .aboutarticle__cover
+
+        include ../layouts/_footer
+        include ../layouts/_scripts

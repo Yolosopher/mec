@@ -18,9 +18,6 @@ img
 .logo
 	width: 98px
 	height: 50px
-
-@import _header
-
 .btn
 	font-family: firagobold
 	font-weight: 700
@@ -40,8 +37,6 @@ img
 		background-color: $dark
 		color: #fff
 
-@import _homehero
-
 .section
 	margin-bottom: 70px
 	@include plus1025()
@@ -60,7 +55,14 @@ img
 		margin-right: 20px
 		@include plus1025()
 			@include font(26px, 36.4px)
-			
+
+
+@import _header
+@import _footer
+
+@import _homehero
+
+		
 $homecategoryHeight: 410px	
 @import _homecategoryslider
 
@@ -72,11 +74,78 @@ $newproductsHeight: 500px
 @import _homenewproducts
 
 
-
-
-
 $homeaboutheight: 496px
 $homeaboutheightMob: 450px
 @import _homeabout
 
-@import _footer
+.pagetitle
+	font-family: firagobold
+	font-weight: 700
+	color: $dark
+	@include uppercase()
+	@include font(34px, 47.6px)
+	@include plus1025()
+		@include font(54px, 75.6px)
+		
+.pagearticle
+	padding-top: 20px
+	@include plus1025()
+		padding-top: 40px
+
+.aboutarticle
+	position: relative
+	width: 100%
+	margin-bottom: 40px
+	@include plus1025()
+		min-height: calc(100vh - #{120px + 20px})
+	&__content
+		margin-bottom: 30px
+		@include plus1025()
+			margin-bottom: 0
+			max-width: min(55%, calc(100% - 612px))
+	&__title
+		margin-bottom: 20px
+		@include plus1025()
+			margin-bottom: 90px
+
+	&__textbox
+		margin-bottom: 40px
+		@include plus1025()
+			margin-bottom: 200px
+		*
+			font-family: firago
+			font-weight: 350
+			@include font(14px, 19.6px)
+			color: $dark
+			@include plus1025()
+				@include font(16px, 22.4px)
+			
+		> *
+			&:not(:last-child)
+				margin-bottom: 20px
+
+	&__cover
+		right: 0
+		top: 62px
+		background: url('../img/admincover.png') no-repeat
+		background-position: center
+		// background-size: 100% 100%
+		background-size: cover
+		height: 500px
+		@include plus1025()
+			position: absolute
+			width: 473px
+			height: 750px
+		&::after
+			content: ''
+			display: inline-block
+			// width: auto
+			height: 100%
+			position: relative
+			z-index: -1
+			background-color: $olive
+			width: 100%
+			top: 5px
+			left: 5px
+			transform: translate(-10px, -10px)
+			// height: auto

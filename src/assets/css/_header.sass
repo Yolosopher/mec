@@ -26,12 +26,16 @@
 			background-color: #fff
 			@include plus1025()
 				background-color: $bodyBg
+			.header__nav
+				background-color: #fff
+				@include plus1025()
+					background-color: $bodyBg
 	&__nav
 		position: absolute
 		top: 89px
 		padding-top: 1px
 		right: 0
-		background-color: #fff
+		background-color: $bodyBg
 		width: 100%
 		z-index: -1
 		transform: translateY(-100%)
@@ -86,7 +90,7 @@
 					justify-content: flex-start
 					@include plus1025()
 						overflow: visible
-						background-color: #fff
+						// background-color: #fff
 						// margin-top: -20px
 					.head
 						height: 1.22em

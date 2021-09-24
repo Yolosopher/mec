@@ -3,7 +3,7 @@
 	width: 100%
 	margin-bottom: 40px
 	@include plus1025()
-		min-height: calc(100vh - #{120px + 20px})
+		min-height: max(#{750px + 62px + 10px + 40px}, calc(100vh - #{120px + 20px}))
 	&__content
 		margin-bottom: 30px
 		@include plus1025()

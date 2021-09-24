@@ -53,8 +53,8 @@ const tabSwitcher = () => {
 			if (option.selected) optionDiv.classList.add('active')
 
 			optionDiv.dataset.value = option.value
-            if (!isColorSelect) optionDiv.innerText = option.innerText
-            else optionDiv.style.setProperty('--color', option.dataset.color)
+            if (isColorSelect) optionDiv.style.setProperty('--color', option.dataset.color)
+			optionDiv.innerText = option.innerText
 			eachbox.appendChild(optionDiv)
 
 

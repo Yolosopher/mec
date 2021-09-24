@@ -10,7 +10,7 @@
 	height: max-content
 	z-index: 2
 	&__content
-		background-color: #fff
+		background-color: $bodyBg
 		padding: 20px
 		display: flex
 		align-items: center
@@ -22,6 +22,10 @@
 			position: relative
 			overflow: visible
 			margin-bottom: 30px
+		&.white
+			background-color: #fff
+			@include plus1025()
+				background-color: $bodyBg
 	&__nav
 		position: absolute
 		top: 89px

@@ -1,5 +1,5 @@
 export const headerCategory = () => {
-	const categoryPlus = document.querySelector('header .products i')
+	const categoryPlus = document.querySelector('header .products .head')
 	const products = document.querySelector('.header li.products')
 	const content = products.querySelector('.content')
     const setHeight = () => {

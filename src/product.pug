@@ -1,13 +1,62 @@
 - const title = 'product'
+-
+    const slides = [
+        'assets/img/products/1.png',
+        'assets/img/products/2.png',
+        'assets/img/products/5.png',
+        'assets/img/products/4.png'
+    ]
 
+-
+    const productInfo = {
+        title: 'კომპიუტერის მაგიდა',
+        code: '#00423',
+        sizes: [
+            '140 x 22 cm',
+            '180 x 42 cm',
+            '220 x 82 cm',
+        ],
+        colors: [
+            'darkred',
+            'darkblue',
+            'orange',
+        ],
+        price: 750.00,
+    }
 doctype html
 html(lang="en")
     head
         include ../layouts/_head
     body
         include ../layouts/_header
-        main
-            section.productpage.container.pagearticle
-            
+        main.productpage.container
+            .productpage__hero
+                .productpage__slider
+                    .productpage__slider__container.swiper-container
+                        .productpage__slider__wrapper.swiper-wrapper
+                            each slide, i in slides
+                                .productpage__slider__slide.swiper-slide
+                                    img(src=slide, alt="")
+                    .productpage__slider__pagination
+                .productpage__info
+                    .productpage__info__top
+                        h1.productpage__info__title=productInfo.title
+                        p.productpage__info__code=productInfo.code
+                        .ns
+                            select(name="size")
+                                each option, i in productInfo.sizes
+                                    option(value=i+1, selected=(i === 0 && true))=option
+                            ul.ns__ul
+                        .ns
+                            select(name="colors")
+                                each option, i in productInfo.colors
+                                    option(value=i+1, selected=(i === 0 && true))=option
+                            ul.ns__ul
+                    .productpage__info__bottom
+                        p.productpage__info__price=productInfo.price + ' ₾'
+                        a.productpage__info__link(href="#") შეგვიკვეთე ახლავე 
+                
+
+
         include ../layouts/_footer
         include ../layouts/_scripts

@@ -78,8 +78,8 @@ $padL: calc( ((100vw - 10px) - 1697px) / 2)
 //         font-weight: 600 !important
 
         
-@mixin transition()
-    transition: .1s ease
+@mixin transition($property: all)
+    transition: $property .1s ease
 @mixin blur($px)
     -webkit-filter: blur($px)
     -moz-filter: blur($px)

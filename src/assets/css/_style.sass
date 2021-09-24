@@ -95,232 +95,68 @@ $homeaboutheightMob: 450px
 @import _pageabout
 
 
-.subcat
-	&__title
-		margin-bottom: 20px
-	&__list
-		display: flex
-		align-items: center
-		overflow-x: auto
-		margin-bottom: 30px
-		padding-bottom: 20px
-		li
-			@include center()
-			height: 20px
-			padding: 0 10px
-			color: $dark
-			@include font(14px, 19.6px)
-			font-family: firagosemibold
-			font-weight: 600
-			@include uppercase()
-			
-			&:not(:last-of-type)	
-				padding-right: 11px
-				border-right: 1px solid $borderLight
-			a
-				white-space: nowrap
-				&.active
-					text-decoration: underline
-.filters
-	height: 120px
-	@include plus1025()
-		height: 60px
-	position: relative
-	&::after
-		content: ''
-		top: 50%
-		height: 1px
-		width: 100%
-		right: 0
-		border-bottom: 1px solid $borderLight
-		z-index: 1
-		position: absolute
-		// transform: translateY(-50%)
-		@include plus1025()
-			display: none
-	&__container
-		height: 100%
-		border-top: 1px solid $borderLight
-		// border-bottom: 1px solid $borderLight
-		// flex-direction: column
-		align-items: center
-		display: grid
-		width: 100%
-		grid-template-rows: 1fr 1fr
-		@include plus1025()
-			display: flex
-			flex-direction: row
-			justify-content: space-between
-	&__list
-		display: flex
-		width: max-content
-		margin: 0 auto
-		@include plus1025()
-			margin: 0
-		&__item
-			cursor: pointer
-			display: flex
-			align-items: center
-			@include font(14px, 17.09px)
-			color: $dark
-			@include uppercase()
-			font-family: firagosemibold
-			font-weight: 600
-			&:not(:last-of-type)
-				margin-right: 20px
-			&::after
-				margin-left: 6px
-				display: inline-block
-				width: 16px
-				height: 16px
-				content: url(../img/svgs/plus.svg)
-			&.toggled
-				&::after
-					content: url(../img/svgs/minus.svg)
+@import _pageproducts
 
-	&__form
-		background-color: #fff
-		border-top: 1px solid $borderLight
-		display: none
-		select
-			display: none !important
-		&.toggled
-			display: block
-		.btn
-			cursor: pointer
-			margin: 10px 20px
-			margin-left: 0
-			color: #fff !important
-			border-color: $olive !important
-			background-color: $olive !important
-			@include transition()
-			&:hover
-				filter: brightness(.9) contrast(1.05)
-		&__allfilters
-			width: 100%
-			height: 180px
-			overflow: hidden
-			display: none
+
+$imageSliderHeight: 250px
+$imageSliderHeightMob: 400px
+.productpage
+	&__hero
+		padding-top: 20px
+
+		@include plus1025()
 			
-			@for $i from 1 through 4
-				&[data-filterid='#{$i}']
-					display: flex
-					.filters__form__container
-						transform: translateX(#{$i * -100% + 100%})
+			height: calc(100vh - #{120px + 20px})
+			display: grid
+			padding: 40px 138px 0 96px
+			grid-template-columns: 37% 31%
+			align-items: center
+			justify-content: space-between
+
+
+	&__slider
 
 		&__container
+			height: $imageSliderHeight
 			width: 100%
-			height: 100%
-			flex-shrink: 0
+			margin-bottom: 30px
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+		&__wrapper
+			height: $imageSliderHeight
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+		&__slide
+			width: 100%
+			height: $imageSliderHeight
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+			img
+				object-fit: contain
+				height: 100%
+				width: 100%
+		&__pagination
 			display: flex
 			align-items: center
-			transform: translateX(0)
-		&__each
-			height: 100%
-			display: flex
-			flex-direction: column
-			// justify-content: space-between
-			padding: 20px 0
-			grid-gap: 20px
-			overflow: auto
-			padding-right: 20px
-			width: 100%
-			@include scrollSetup ($olive, 4px)
-			@include plus700()
-				min-width: max-content
-				width: 50%
-			@include plus1025()
-				width: 20%
-			&__option
-				display: flex
-				align-items: center
-				cursor: pointer
-				font-family: firagosemibold
-				font-weight: 600
-				color: $dark
-				@include uppercase()
-				@include font(16px, 19.54px)
-				
-				&::before
-					content: ''
-					display: inline-block
-					width: 18px
-					min-width: 18px
-					height: 18px
-					margin-right: 12px
-					border-radius: 50%
-					@include transition()
-					background-color: #fff
-					border: 1px solid $borderLight
-				&.active
-					&::before
-						border-color: $dark
-						background-color: $dark
-			&.multiple
-				.filters__form__each__option
-					&::before
-						border-radius: 0
-			&.color
-				.filters__form__each__option
-					// --color: blue
-					&::before
-						border-color: var(--color) !important
-					&.active
-						&::before
-							border-color: var(--color) !important
-							background-color: var(--color) !important
-				
-	&__quantity
-		color: $dark
-		font-family: firagosemibold
-		@include font(14px)
-		@include uppercase()
-		margin: 0 auto
-		@include plus1025()
-			margin: unset
-.productsresult
-	&__controls
-		display: flex
-		align-items: center
-		justify-content: space-between
-		height: 106px
-		&__pagination
-			font-family: firagobold
-			font-weight: 700
-			@include font(14px, 17.09px)
-			color: $dark
-			a
+			justify-content: center
+			height: 2px
+			&__bullet
+				height: 2px
+				width: 32px
 				opacity: .3
 				display: inline-block
-				padding: 10px
-				&:first-child
-					padding-left: 0
+				background-color: $dark
+				@include transition(opacity)
+				&:not(:last-of-type)
+					margin-right: 20px
 				&.active
 					opacity: 1
-		&__nav
-			display: grid
-			grid-gap: 30px
-			grid-template-columns: auto auto
-			width: max-content
-			align-items: center
-			height: 24px
-			cursor: pointer
-			&__left, &__right
-				display: inline-block
-				width: 24px
-				height: 100%
-				&::after
-					display: inline-block
-					width: 100%
-					height: 100%
-				.disabled
-					opacity: .3
-			&__left
-				content: url(../img/svgs/slider-left.svg)
-			&__right
-				content: url(../img/svgs/slider-right.svg)
-			
-.filters__form__container
-	// 
-	
 
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	

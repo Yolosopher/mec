@@ -176,23 +176,23 @@ const orderemail = document.getElementById('orderemail')
 const ordertel = document.getElementById('ordertel')
 
 orderfirstname.addEventListener('change', () => {
-	nameChecker(orderfirstname, true, 2)
+	nameChecker(orderfirstname, false, 2)
 })
 orderlastname.addEventListener('change', () => {
-	nameChecker(orderlastname, true, 2)
+	nameChecker(orderlastname, false, 2)
 })
 orderemail.addEventListener('change', () => {
-	emailChecker(orderemail, true)
+	emailChecker(orderemail, false)
 })
 ordertel.addEventListener('change', () => {
-	nameChecker(ordertel, true)
+	nameChecker(ordertel, false)
 })
 
 ordermodal.addEventListener('submit', e => {
-	nameChecker(orderfirstname, true, 2)
-    nameChecker(orderlastname, true, 2)
-    emailChecker(orderemail, true)
-    nameChecker(ordertel, true)
+	nameChecker(orderfirstname, false, 2)
+    nameChecker(orderlastname, false, 2)
+    emailChecker(orderemail, false)
+    nameChecker(ordertel, false)
 
 	if (ordermodal.querySelectorAll('.invalid')[0]) {
 		e.preventDefault()

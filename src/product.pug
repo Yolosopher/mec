@@ -174,13 +174,21 @@ html(lang="en")
             .ordermodal__X
             h6.ordermodal__title შეკვეთა
             .ordermodal__inputs
-                input#orderfirstname.input-div(type="text", name="first_name", placeholder="სახელი")
+                label.input-div(for="orderfirstname")
+                    input#orderfirstname(type="text", name="first_name", placeholder=" ")
+                    span.holder სახელი
 
-                input#orderlastname.input-div(type="text", name="last_name", placeholder="გვარი")
+                label.input-div(for="orderlastname")
+                    input#orderlastname(type="text", name="last_name", placeholder=" ")
+                    span.holder გვარი
 
-                input#orderemail.input-div(type="text", name="email", placeholder="example@gmail.com")
+                label.input-div(for="orderemail")
+                    input#orderemail(type="text", name="email", placeholder=" ")
+                    span.holder ელ.ფოსტა
                 
-                input#ordertel.input-div(type="text", name="tel", placeholder="5********")
+                label.input-div(for="ordertel")
+                    input#ordertel(type="text", name="tel", placeholder=" ")
+                    span.holder ტელ. ნომერი
             button.ordermodal__submit.btnreverse(type="submit") შეგვიკვეთე 
 
         .orderresult__bg

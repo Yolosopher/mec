@@ -185,10 +185,18 @@
       <div class="ordermodal__X"></div>
       <h6 class="ordermodal__title">შეკვეთა</h6>
       <div class="ordermodal__inputs">
-        <input class="input-div" id="orderfirstname" type="text" name="first_name" placeholder="სახელი">
-        <input class="input-div" id="orderlastname" type="text" name="last_name" placeholder="გვარი">
-        <input class="input-div" id="orderemail" type="text" name="email" placeholder="example@gmail.com">
-        <input class="input-div" id="ordertel" type="text" name="tel" placeholder="5********">
+        <label class="input-div" for="orderfirstname">
+          <input id="orderfirstname" type="text" name="first_name" placeholder=" "><span class="holder">სახელი</span>
+        </label>
+        <label class="input-div" for="orderlastname">
+          <input id="orderlastname" type="text" name="last_name" placeholder=" "><span class="holder">გვარი</span>
+        </label>
+        <label class="input-div" for="orderemail">
+          <input id="orderemail" type="text" name="email" placeholder=" "><span class="holder">ელ.ფოსტა</span>
+        </label>
+        <label class="input-div" for="ordertel">
+          <input id="ordertel" type="text" name="tel" placeholder=" "><span class="holder">ტელ. ნომერი</span>
+        </label>
       </div>
       <button class="ordermodal__submit btnreverse" type="submit">შეგვიკვეთე </button>
     </form>

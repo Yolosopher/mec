@@ -74,3 +74,33 @@
             &__right
                 &::after
                     content: url(../img/svgs/slider-right.svg)
+
+    &.alsointeresting
+        margin-bottom: 0 !important
+        border-bottom: none !important
+        .homecategory__slider
+            border-bottom: none !important
+
+            height: $homecategoryHeightProductinMob
+
+            @include plus1025()
+                height: $homecategoryHeightProductin
+            &__container
+
+                height: $homecategoryHeightProductinMob
+            
+                @include plus1025()
+                    height: $homecategoryHeightProductin
+
+            &__wrapper
+
+                height: $homecategoryHeightProductinMob
+
+                @include plus1025()
+                    height: $homecategoryHeightProductin
+            .newproducts__list__item
+                
+                height: $homecategoryHeightProductinMob
+
+                @include plus1025()
+                    height: $homecategoryHeightProductin

@@ -6,6 +6,7 @@ $bodyBg: #FFFBF8
 $orange: #ED8E1D
 $borderLight: #D9D9D9    
 $olive: #E2E0D4
+$red: #FF5E5E
 
 $width380: 380px
 $width450: 450px
@@ -106,23 +107,14 @@ $padL: calc( ((100vw - 10px) - 1697px) / 2)
 //     @include plus1900()
 //         padding: 0 135px
 
-// .input-div
-//     border: 1px solid transparet
-//     border-radius: 12px
-//     display: flex
-//     input
-//         // display: flex
-//         width: 100%
-//         height: 100%
-//     &.invalid.invalid-shown
-//         border-color: $darkred
+
     
-@mixin userselect()
-    -webkit-user-select: text !important
-    -khtml-user-select: text !important
-    -moz-user-select: text !important
-    -ms-user-select: text !important
-    user-select: text !important
+@mixin userselect($none: text)
+    -webkit-user-select: $none !important
+    -khtml-user-select: $none !important
+    -moz-user-select: $none !important
+    -ms-user-select: $none !important
+    user-select: $none !important
 
 @mixin scrollSetup ($thumbcolor, $width: 2px, $bgcolor: transparent) 
     &::-webkit-scrollbar

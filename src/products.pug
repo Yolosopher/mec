@@ -85,13 +85,12 @@ html(lang="en")
             section.filters
                 .filters__container.container
                     .filters__list
-                        .filters__list__item(data-filterid="1") კატეგორია
-                        .filters__list__item(data-filterid="2") ფასი
-                        .filters__list__item(data-filterid="3") ფერი
+                        .filters__list__item ფილტრაცია
                     .filters__quantity 28 პროდუქტი
             form.filters__form.container(action="/filters", method="get")
                 .filters__form__allfilters
                     .filters__form__container
+                        .filters__form__container__title კატეგორია
                         select(name="category", multiple)
                             option(value="1") მაგიდა
                             option(value="2", selected) დეკორატიული თარო
@@ -99,7 +98,7 @@ html(lang="en")
                             option(value="4") ტელევიზორის სადგამი
                         .filters__form__each
                             //- .filters__form__each__option
-                    .filters__form__container
+                    .filters__form__container.filters__form__container__title ფასი
                         select(name="price")
                             option(value="1") 500 ₾ - მდე
                             option(value="2", selected) 500 ₾ - 1000 ₾
@@ -108,7 +107,7 @@ html(lang="en")
                             option(value="5") 5000 ₾ და ზევით                            
                         .filters__form__each
                             //- .filters__form__each__option
-                    .filters__form__container
+                    .filters__form__container.filters__form__container__title ფერი
                         select#colorselect(name="color", multiple)
                             option(value="1", data-color="#ba1e22") მუქი წითელი
                             option(value="2", selected, data-color="#6f3495") ფარფლ როგორაა ქართულად
@@ -116,7 +115,7 @@ html(lang="en")
                             option(value="4", data-color="#84f75e") ლაიმის ფერი
                         .filters__form__each
                             //- .filters__form__each__option    
-                button.btn(type="submit") ფილტრი
+                button.btn(type="submit") გაფილტრე
 
 
             section.productsresult

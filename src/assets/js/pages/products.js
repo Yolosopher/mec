@@ -13,14 +13,8 @@ window.addEventListener('load', () => {
 let filtersForm = document.querySelector('.filters__form')
 let allfiltersDiv = document.querySelector('.filters__form__allfilters')
 const tabSwitcher = () => {
-    let activeToggleElement = document.querySelector('.filters__list__item.toggled')
-    if (!activeToggleElement) {
-        allfiltersDiv.removeAttribute('data-filterid')
-        filtersForm.classList.remove('toggled')
-    } else {
-        filtersForm.classList.add('toggled')
-        allfiltersDiv.dataset.filterid = activeToggleElement.dataset.filterid
-    }
+	allfiltersDiv.classList.toggle('toggled')
+	filtersForm.classList.toggle('toggled')
 }
 ;[...document.querySelectorAll('.filters__list__item')].forEach((item) => {
 	item.addEventListener('click', () => {

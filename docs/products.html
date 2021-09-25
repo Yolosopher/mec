@@ -46,9 +46,7 @@
       <section class="filters">
         <div class="filters__container container">
           <div class="filters__list">
-            <div class="filters__list__item" data-filterid="1">კატეგორია</div>
-            <div class="filters__list__item" data-filterid="2">ფასი</div>
-            <div class="filters__list__item" data-filterid="3">ფერი</div>
+            <div class="filters__list__item">ფილტრაცია</div>
           </div>
           <div class="filters__quantity">28 პროდუქტი</div>
         </div>
@@ -56,6 +54,7 @@
       <form class="filters__form container" action="/filters" method="get">
         <div class="filters__form__allfilters">
           <div class="filters__form__container">
+            <div class="filters__form__container__title">კატეგორია</div>
             <select name="category" multiple>
               <option value="1">მაგიდა</option>
               <option value="2" selected>დეკორატიული თარო</option>
@@ -64,7 +63,7 @@
             </select>
             <div class="filters__form__each"></div>
           </div>
-          <div class="filters__form__container">
+          <div class="filters__form__container filters__form__container__title">ფასი
             <select name="price">
               <option value="1">500 ₾ - მდე</option>
               <option value="2" selected>500 ₾ - 1000 ₾</option>
@@ -74,7 +73,7 @@
             </select>
             <div class="filters__form__each"></div>
           </div>
-          <div class="filters__form__container">
+          <div class="filters__form__container filters__form__container__title">ფერი
             <select id="colorselect" name="color" multiple>
               <option value="1" data-color="#ba1e22">მუქი წითელი</option>
               <option value="2" selected data-color="#6f3495">ფარფლ როგორაა ქართულად</option>
@@ -84,7 +83,7 @@
             <div class="filters__form__each"></div>
           </div>
         </div>
-        <button class="btn" type="submit">ფილტრი</button>
+        <button class="btn" type="submit">გაფილტრე</button>
       </form>
       <section class="productsresult">
         <ul class="newproducts__list">

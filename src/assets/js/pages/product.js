@@ -193,7 +193,7 @@ ordermodal.addEventListener('submit', e => {
     nameChecker(orderlastname, true, 2)
     emailChecker(orderemail, true)
     nameChecker(ordertel, true)
-    
+
 	if (ordermodal.querySelectorAll('.invalid')[0]) {
 		e.preventDefault()
 		ordermodal.querySelectorAll('.invalid').forEach((each) => {
@@ -201,3 +201,29 @@ ordermodal.addEventListener('submit', e => {
 		})
 	}
 })
+
+
+const orderresult = document.querySelector('.orderresult')
+const orderresult__bg = document.querySelector('.orderresult__bg')
+const orderresult__X = document.querySelector('.orderresult__X')
+
+const orderresultToggler = (show = true) => {
+    if (show) {
+        orderresult__bg.classList.add('toggled')
+        orderresult.classList.add('toggled')
+    } else {
+        orderresult__bg.classList.remove('toggled')
+        orderresult.classList.remove('toggled')    
+    }
+}
+
+orderresult__bg.addEventListener('click', () => {
+    orderresultToggler(false)
+})
+orderresult__X.addEventListener('click', () => {
+    orderresultToggler(false)
+})
+
+if (showorderresult === true) {
+    orderresultToggler()
+}

@@ -183,5 +183,16 @@ html(lang="en")
                 input#ordertel.input-div(type="text", name="tel", placeholder="5********")
             button.ordermodal__submit.btnreverse(type="submit") შეგვიკვეთე 
 
+        .orderresult__bg
+        .orderresult
+            .orderresult__X
+            h6.orderresult__title თქვენი შეკვეთა მიღებულია
+            p.orderresult__subtitle ჩვენ მალე დაგიკავშირდებით
+            .orderresult__smile
+            a.orderresult__submit.btnreverse(href="rules.html") შეკვეთის პირობები 
+
+        script.
+            let showorderresult = true // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+
         include ../layouts/_footer
         include ../layouts/_scripts

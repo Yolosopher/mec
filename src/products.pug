@@ -98,7 +98,8 @@ html(lang="en")
                             option(value="4") ტელევიზორის სადგამი
                         .filters__form__each
                             //- .filters__form__each__option
-                    .filters__form__container.filters__form__container__title ფასი
+                    .filters__form__container
+                        .filters__form__container__title ფასი
                         select(name="price")
                             option(value="1") 500 ₾ - მდე
                             option(value="2", selected) 500 ₾ - 1000 ₾
@@ -107,7 +108,8 @@ html(lang="en")
                             option(value="5") 5000 ₾ და ზევით                            
                         .filters__form__each
                             //- .filters__form__each__option
-                    .filters__form__container.filters__form__container__title ფერი
+                    .filters__form__container
+                        .filters__form__container__title ფერი
                         select#colorselect(name="color", multiple)
                             option(value="1", data-color="#ba1e22") მუქი წითელი
                             option(value="2", selected, data-color="#6f3495") ფარფლ როგორაა ქართულად

@@ -1,0 +1,413 @@
+.productpage
+	&__hero
+		padding-top: 20px
+		margin-bottom: 50px
+		@include plus1025()
+			margin-bottom: 70px
+			height: calc(100vh - #{120px})
+			display: grid
+			padding: 40px 138px 20px 96px
+			grid-template-columns: 37% minmax(454px, 31%)
+			align-items: center
+			justify-content: space-between
+
+
+	&__slider
+		margin-bottom: 82px
+		@include plus1025()
+			margin-bottom: 0
+
+		&__container
+			height: $imageSliderHeight
+			width: 100%
+			margin-bottom: 30px
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+		&__wrapper
+			height: $imageSliderHeight
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+		&__slide
+			width: 100%
+			height: $imageSliderHeight
+			@include plus1025()
+				height: $imageSliderHeightMob
+
+			img
+				object-fit: contain
+				height: 100%
+				width: 100%
+		&__pagination
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 2px
+			&__bullet
+				height: 2px
+				width: 32px
+				opacity: .3
+				display: inline-block
+				background-color: $dark
+				@include transition(opacity)
+				&:not(:last-of-type)
+					margin-right: 20px
+				&.active
+					opacity: 1
+
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		width: 100%
+		height: 100%
+		align-items: stretch
+		color: $dark
+		// @include uppercase()
+		&__top
+			margin-bottom: 40px
+			@include plus1025()
+				margin-bottom: 0
+		&__title
+			@include font(22px, 30.8px)
+			font-family: firagobold
+			font-weight: 700
+			margin-bottom: 16px
+
+		&__code
+			font-family: firagobook
+			font-weight: 400
+			@include font(14px, 16.55px)
+			margin-bottom: 30px
+		.ns
+			margin-bottom: 10px
+		&__price
+			font-family: firagobold
+			font-weight: 700
+			// color: $dark
+			margin-bottom: 20px
+			@include uppercase()
+			@include font(24px, 33.6px)
+			
+		&__link
+			max-width: none
+
+	&__details
+		display: flex
+		flex-direction: column
+		width: 100%
+		grid-gap: 5px
+		color: $dark
+		margin-bottom: 50px
+		@include plus1025()
+			margin-bottom: 90px
+		&__each
+			--height: max-content
+			width: 100%
+			height: 58px
+			background-color: #fff
+			overflow: hidden
+			transition: height .05s ease-out
+			&__heading
+				@include userselect(none)
+				cursor: pointer
+				height: 58px
+				position: relative
+				padding-left: 76px
+				padding-right: 10px
+				display: flex
+				align-items: center
+				margin-bottom: 10px
+				
+				@include font(14px, 17.09px)
+				font-family: firagosemibold
+				@include uppercase()
+				
+				&::before
+					content: url(../img/svgs/plus.svg)
+					display: inline-block
+					position: absolute
+					left: 20px
+					width: 16px
+					height: 16px
+					top: 50%
+					transform: translateY(-50%)
+			&__textbox
+				padding: 20px
+				padding-right: 10px
+				padding-left: 76px
+				@include font(14px, 19.6px)
+				font-family: firagobook
+				font-weight: 350
+				> *
+					&:not(:last-child)
+						margin-bottom: 20px
+			&.toggled
+				transition-duration: .1s
+				height: var(--height)
+				.productpage__details__each__heading
+					&::before
+						content: url(../img/svgs/minus.svg)
+
+				
+.ns
+	position: relative
+	width: 100%
+	height: 52px
+	overflow: visible
+	// z-index: 1
+	cursor: pointer
+	user-select: none
+	*
+		user-select: none
+	select
+		display: none
+	&::after
+		content: url(../img/svgs/nsarrow.svg)
+		position: absolute
+		right: 20px
+		top: 14px
+		display: inline-block
+		height: 24px
+		z-index: 3
+		width: 24px
+		transition: transform .1 ease-out
+		transform: rotate(180deg)
+	&.toggled
+		z-index: 4
+		.ns__ul
+			transition-duration: .1s
+			z-index: 2
+			height: var(--height)
+		li
+			pointer-events: all
+		&::after
+			transition-duration: .1s
+			transform: rotate(0deg)
+	&__ul
+		--height: max-content
+		display: flex
+		flex-direction: column
+		width: 100%
+		border: 1px solid $dark
+		overflow: hidden
+		height: 52px
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $bodyBg
+		transition: height .05s ease-out
+		li
+			pointer-events: none
+			cursor: pointer
+			padding: 0 20px
+			display: flex
+			cursor: pointer
+			align-items: center
+			justify-content: flex-start
+			width: 100%
+			height: 52px
+			font-family: firagosemibold
+			font-weight: 500
+			color: $dark
+			@include font(14px)
+			
+			flex-shrink: 0
+			&:not(.active)
+				border-top: 1px solid $borderLight
+			&.active
+
+				order: -1
+	
+// .input-div
+// 	// display: block
+// 	// height: 35px
+// 	// color: $dark
+// 	// font-family: firagosemibold
+// 	// @include font(18px, 25.2px)
+// 	// @include uppercase()
+// 	// // border-bottom: 1px solid $dark
+
+// 	// // &:placeholder
+// 	// // 	color: $dark
+// 	// // 	opacity: .7
+//     // // &.invalid.invalid-shown
+//     // //     border-color: $darkred
+
+.input-div
+	display: block
+	height: 35px
+	border-bottom: 1px solid $dark
+	transition: color .1s ease, border-color .1s ease
+	position: relative
+	input
+		color: $dark
+		font-family: firagosemibold
+		@include font(18px, 25.2px)
+		@include uppercase()
+		display: inline-block
+		width: 100%
+		
+		position: absolute
+		top: 0
+		left: 0
+		&:not(:placeholder-shown), &:focus
+			+ span
+				bottom: 100%
+				@include font(12px, 16.8px)
+				opacity: .3
+
+		
+	&.invalid.invalid-shown
+		color: $red
+		border-color: $red
+	span
+		position: absolute
+		bottom: calc(100% - 25.2px)
+		left: 0
+		color: $dark
+		font-family: firagosemibold
+		@include font(18px, 25.2px)
+		@include uppercase()
+		transition: .05s ease-out
+		opacity: 1
+
+	
+		
+
+.ordermodal
+	z-index: 100
+	position: fixed
+	top: 50%
+	background-color: #fff
+	left: 50%
+	transform: translate(-50%, -50%)
+	max-width: 690px
+	padding: 20px
+	display: none
+	flex-direction: column
+	align-items: center
+	width: calc(100% - 20px)
+	> *
+		max-width: 454px
+
+	&.toggled
+		display: flex
+	&__bg
+		position: fixed
+		z-index: 99
+		width: 100%
+		height: 100%
+		right: 0
+		top: 0
+		display: none
+		background-color: rgba($dark, .3)
+		&.toggled
+			display: block
+	&__X
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 24px
+		height: 24px
+		z-index: 1
+		display: inline-block
+		cursor: pointer
+		&::after
+			content: url(../img/svgs/ordermodalx.svg)
+			display: inline-block
+			width: 24px
+			height: 24px
+	&__title
+		font-family: firagosemibold
+		@include font(26px, 36.4px)
+		color: $dark
+		margin-bottom: 50px
+		text-align: center
+		@include uppercase()
+		font-weight: 600
+		@include plus1025()
+			margin-bottom: 70px
+	&__inputs
+		display: flex
+		flex-direction: column
+		width: 100%
+		grid-gap: 30px
+		margin-bottom: 30px
+		@include plus1025()
+			margin-bottom: 50px
+	&__submit
+		width: 100%
+		// max-width: none !important
+
+
+
+.orderresult
+	z-index: 100
+	position: fixed
+	top: 50%
+	background-color: #fff
+	left: 50%
+	transform: translate(-50%, -50%)
+	max-width: 690px
+	padding: 20px
+	display: none
+	flex-direction: column
+	align-items: center
+	width: calc(100% - 20px)
+	> *
+		max-width: 454px
+
+	&.toggled
+		display: flex
+	&__bg
+		position: fixed
+		z-index: 99
+		width: 100%
+		height: 100%
+		right: 0
+		top: 0
+		display: none
+		background-color: rgba($dark, .3)
+		&.toggled
+			display: block
+	&__X
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 24px
+		height: 24px
+		z-index: 1
+		display: inline-block
+		cursor: pointer
+		&::after
+			content: url(../img/svgs/ordermodalx.svg)
+			display: inline-block
+			width: 24px
+			height: 24px
+	&__title, &__subtitle
+		font-family: firagosemibold
+		@include font(26px, 36.4px)
+		color: $dark
+		text-align: center
+		@include uppercase()
+		font-weight: 600
+		margin-bottom: 16px !important
+
+	&__subtitle
+		@include font(18px, 25.2px)
+		margin-bottom: 20px !important
+	&__smile
+		min-height: 160px
+		margin-bottom: 20px
+		@include center()
+		&::after
+			content: url(../img/smile.png)
+			width: 120px
+			height: 120px
+			display: inline-block
+			
+
+	&__submit
+		width: 100%

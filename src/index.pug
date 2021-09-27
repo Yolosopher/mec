@@ -67,6 +67,15 @@
         }
     ]
 
+-
+    const blogs = [
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+        'assets/img/blog/3.png',
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+    ]
+
 doctype html
 html(lang="en")
     head
@@ -136,6 +145,7 @@ html(lang="en")
             section.section.newproducts
                 .section__header.container
                     h6.section__title ახალი პროდუქცია
+                    
                 ul.newproducts__list
                     each product, i in products
                         li.newproducts__list__item
@@ -147,6 +157,23 @@ html(lang="en")
                                     span.discount=product.discount + ' ₾'
                                 span=product.pricerange + ' ₾'
                             a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი
+
+            section.section.homeblog
+                .section__header.container
+                    h6.section__title ბლოგი
+                    .homeblog__slider__nav
+                        .homeblog__slider__nav__left
+                        .homeblog__slider__nav__right
+                .homeblog__slider
+                    .homeblog__slider__container.swiper-container
+                        .homeblog__slider__wrapper.swiper-wrapper
+                            for blogimg, i in blogs
+                                .homeblog__slider__slide.swiper-slide
+                                    .homeblog__slider__slide__imgbox
+                                        img(src=blogimg, alt=(i+1) + 'image')
+                                    h3.homeblog__slider__slide__title=(i+1) + ' MEC - ახალი სიტყვა ქართულ ბაზარზე ინოვაციური პროდუქციით'
+                                    p.homeblog__slider__slide__description= (i+1) + ' ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.'
+                                    a.homeblog__slider__slide__link.btn(href="blog.html") კითხვის გაგრძელება
             article.homeabout
                 .homeabout__content
                     .homeabout__textbox

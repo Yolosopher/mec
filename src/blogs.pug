@@ -1,0 +1,40 @@
+- const title = 'blogs'
+-
+    const blogs = [
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+        'assets/img/blog/3.png',
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+        'assets/img/blog/3.png',
+    ]
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            article.blogsarticle.pagearticle
+                .blogsarticle__content.container
+                    h1.blogsarticle__title.pagetitle ბლოგი
+
+                .homeblog__slider__wrapper.inblogs
+                    for blogimg, i in blogs
+                        .homeblog__slider__slide
+                            .homeblog__slider__slide__imgbox
+                                img(src=blogimg, alt=(i+1) + 'image')
+                            h3.homeblog__slider__slide__title=(i+1) + ' MEC - ახალი სიტყვა ქართულ ბაზარზე ინოვაციური პროდუქციით'
+                            p.homeblog__slider__slide__description= (i+1) + ' ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.'
+                            a.homeblog__slider__slide__link.btn(href="blog.html") კითხვის გაგრძელება
+
+
+            section.productsresult__controls.container
+                .productsresult__controls__pagination
+                    each xxxx, i in Array(13)
+                        a(href="product.html", class=(i === 3 && 'active'))=i + 1
+                .productsresult__controls__nav
+                    a.productsresult__controls__nav__left(href="products.html") 
+                    a.productsresult__controls__nav__right(href="products.html") 
+        include ../layouts/_footer
+        include ../layouts/_scripts

@@ -35,7 +35,7 @@ export const imgTask = () => {
 
 export const jsTask = () => {
 	return gulp
-		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js'])
+		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js', 'src/assets/js/pages/blog.js', 'src/assets/js/pages/blogs.js'])
 		.pipe(
 			webpack({
 				entry: {
@@ -44,6 +44,8 @@ export const jsTask = () => {
 					contact: './src/assets/js/pages/contact.js',
 					product: './src/assets/js/pages/product.js',
 					products: './src/assets/js/pages/products.js',
+					blog: './src/assets/js/pages/blog.js',
+					blogs: './src/assets/js/pages/blogs.js',
 				},
 				output: {
 					filename: '[name].min.js',

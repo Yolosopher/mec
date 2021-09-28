@@ -20,6 +20,7 @@
                 <div class="categories"><a class="categories__item" href="products.html">მაგიდა</a><a class="categories__item" href="products.html">დეკორატიული თარო</a><a class="categories__item" href="products.html">ბავშვის კუთხე</a><a class="categories__item" href="products.html">ტელევიზორის სადგამი</a></div>
               </div>
             </li>
+            <li><a href="blogs.html">ბლოგი                    </a></li>
             <li><a href="about.html">ჩვენ შესახებ</a></li>
             <li><a href="contact.html">კონტაქტი</a></li>
           </ul>
@@ -31,17 +32,71 @@
       </div>
     </header>
     <main>
-      <section class="contactpage container pagearticle"></section>
+      <section class="contactpage container pagearticle">
+        <h1 class="aboutarticle__title pagetitle">კონტაქტი</h1>
+        <div class="contactpage__combiner">
+          <form class="contactpage__form" action="/contact">
+            <div class="ordermodal__inputs">
+              <label class="input-div" for="contactfirstname">
+                <input id="contactfirstname" type="text" name="first_name" placeholder=" "><span class="holder">სახელი</span>
+              </label>
+              <label class="input-div" for="contactlastname">
+                <input id="contactlastname" type="text" name="last_name" placeholder=" "><span class="holder">გვარი</span>
+              </label>
+              <label class="input-div" for="contactemail">
+                <input id="contactemail" type="text" name="email" placeholder=" "><span class="holder">ელ.ფოსტა</span>
+              </label>
+              <div class="input-div select"><span class="holder">თემა</span>
+                <div class="ns input">
+                  <select id="contactabout" name="contactabout">
+                    <option value="1" selected>შეკვეთის დეტალები</option>
+                    <option value="2">დიდი რაოდენობით შეკვეთა</option>
+                    <option value="3">უკან დაბრუნება</option>
+                  </select>
+                  <ul class="ns__ul nice"></ul>
+                </div>
+              </div>
+              <label class="input-div" for="contactsubject">
+                <input id="contactsubject" type="text" name="subject" placeholder=" "><span class="holder">საკითხი</span>
+              </label>
+            </div>
+            <button class="ordermodal__submit btnreverse" type="submit">გაგზავნა </button>
+          </form>
+          <div class="contactpage__info">
+            <div class="contactpage__info__list"><a class="mob" href="tel:+995 555 444 333">555 444 333</a><a href="#facebook" target="_blank">Facebook.</a><a class="mail" href="mailto:example@gmail.com">example@gmail.com</a><a href="#instagram" target="_blank">Instagram.</a></div>
+            <div class="btn contactpage__info__leavemsg">დაგვიტოვე შეტყობინება და ჩვენ დაგიკავშირდებით</div>
+          </div>
+        </div>
+        <div class="ordermodal__bg"></div>
+      </section>
     </main>
+    <form class="ordermodal" action="/message">
+      <div class="ordermodal__X"></div>
+      <h6 class="ordermodal__title">როგორ დაგიკავშირდეთ?</h6>
+      <div class="ordermodal__inputs">
+        <label class="input-div" for="orderfirstname">
+          <input id="orderfirstname" type="text" name="first_name" placeholder=" "><span class="holder">სახელი</span>
+        </label>
+        <label class="input-div" for="orderlastname">
+          <input id="orderlastname" type="text" name="last_name" placeholder=" "><span class="holder">გვარი</span>
+        </label>
+        <label class="input-div" for="ordertel">
+          <input id="ordertel" type="text" name="tel" placeholder=" "><span class="holder">ტელ. ნომერი</span>
+        </label>
+      </div>
+      <button class="ordermodal__submit btnreverse" type="submit">გაგზავნა </button>
+    </form>
     <footer class="footer container">
       <nav class="footer__nav">
         <ul class="footer__nav__ul">
           <li><a href="index.html">მთავარი</a></li>
+          <li><a href="blogs.html">ბლოგი</a></li>
           <li><a href="about.html">ჩვენ შესახებ</a></li>
           <li><a href="contact.html">კონტაქტი</a></li>
         </ul>
       </nav>
       <div class="footer__rights"><span>All rights reserved</span><span class="copy"></span><span>2021</span></div>
+      <div class="footer__socials"><a class="fb" href="#fb"></a><a class="tw" href="#tw"></a><a class="ig" href="#ig"></a></div>
     </footer>
     <script src="assets/js/contact.min.js"> </script>
   </body>

@@ -8,6 +8,61 @@ html(lang="en")
         include ../layouts/_header
         main
             section.contactpage.container.pagearticle
-            
+                h1.aboutarticle__title.pagetitle კონტაქტი
+                .contactpage__combiner
+                    form.contactpage__form(action="/contact")
+                        .ordermodal__inputs
+                            label.input-div(for="contactfirstname")
+                                input#contactfirstname(type="text", name="first_name", placeholder=" ")
+                                span.holder სახელი
+
+                            label.input-div(for="contactlastname")
+                                input#contactlastname(type="text", name="last_name", placeholder=" ")
+                                span.holder გვარი
+
+                            label.input-div(for="contactemail")
+                                input#contactemail(type="text", name="email", placeholder=" ")
+                                span.holder ელ.ფოსტა
+
+                            .input-div.select
+                                //- input#contactabout(type="text", name="about", placeholder=" ")
+                                span.holder თემა
+                                .ns.input
+                                    select#contactabout(name="contactabout")
+                                        option(value="1", selected) შეკვეთის დეტალები
+                                        option(value="2") დიდი რაოდენობით შეკვეთა
+                                        option(value="3") უკან დაბრუნება
+                                    ul.ns__ul.nice
+
+                            label.input-div(for="contactsubject")
+                                input#contactsubject(type="text", name="subject", placeholder=" ")
+                                span.holder საკითხი
+                                
+                        button.ordermodal__submit.btnreverse(type="submit") გაგზავნა 
+
+                    .contactpage__info
+                        .contactpage__info__list
+                            a.mob(href="tel:+995 555 444 333") 555 444 333
+                            a(href="#facebook", target="_blank") Facebook.
+                            a.mail(href="mailto:example@gmail.com") example@gmail.com
+                            a(href="#instagram", target="_blank") Instagram.
+                        .btn.contactpage__info__leavemsg დაგვიტოვე შეტყობინება და ჩვენ დაგიკავშირდებით
+                .ordermodal__bg
+        form.ordermodal(action="/message")
+            .ordermodal__X
+            h6.ordermodal__title როგორ დაგიკავშირდეთ?
+            .ordermodal__inputs
+                label.input-div(for="orderfirstname")
+                    input#orderfirstname(type="text", name="first_name", placeholder=" ")
+                    span.holder სახელი
+
+                label.input-div(for="orderlastname")
+                    input#orderlastname(type="text", name="last_name", placeholder=" ")
+                    span.holder გვარი
+                
+                label.input-div(for="ordertel")
+                    input#ordertel(type="text", name="tel", placeholder=" ")
+                    span.holder ტელ. ნომერი
+            button.ordermodal__submit.btnreverse(type="submit") გაგზავნა 
         include ../layouts/_footer
         include ../layouts/_scripts

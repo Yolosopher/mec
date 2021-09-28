@@ -1,0 +1,50 @@
+.blogarticle
+	color: $dark
+	margin-bottom: 70px
+	@include plus1025()
+		margin-bottom: 90px
+	&__content
+		width: 100%
+		@include plus1025()
+			padding: 0 138px
+	&__cover
+		margin-bottom: 16px
+		width: 100%
+		height: 300px
+		@include plus1025()
+			height: 600px
+			max-height: 500px
+		@include plus1441()
+			max-height: 600px
+		img
+			object-fit: cover
+	&__title
+		font-family: firagobold
+		@include font(22px, 30.8px)
+		font-weight: 800
+		margin-bottom: 16px
+	&__time
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+		font-family: firago
+		font-weight: 400
+		color: $dark
+		@include font(14px, 19.6px)
+		
+		&::before
+			content: url(../img/svgs/calendar.svg)
+			display: inline-block
+			width: 20px
+			height: 20px
+			margin-right: 6px
+	&__textbox
+		> *
+			&:not(:last-child)
+				margin-bottom: 20px
+		*
+			font-family: firago
+			font-weight: 400
+			color: $dark
+			@include font(14px, 19.6px)
+			

@@ -1,9 +1,13 @@
 .footer
-	@include center()
-	height: 105px
+	height: 160px
 	width: 100%
+	position: relative
 	border-top: 1px solid $borderLight
+	@include center()
+	flex-direction: column
 	@include plus1025()
+		height: 105px
+		flex-direction: row
 		justify-content: space-between
 	&__nav
 		display: none
@@ -35,6 +39,9 @@
 		align-items: center
 		@include font(14px, 19.6px)
 		color: $dark
+		margin-bottom: 30px
+		@include plus1025()
+			margin-bottom: 0
 		.copy
 			width: 24px
 			height: 24px
@@ -45,3 +52,35 @@
 				width: 100%
 				display: inline-block
 				content: url(../img/svgs/copy.svg)
+	&__socials
+		// display: none
+		display: grid
+		grid-template-columns: repeat(3, auto)
+		grid-gap: 30px
+		align-items: center
+		height: 24px
+		@include plus1025()
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		a
+			height: 100%
+			width: 24px
+			display: inline-block
+			&::after
+				width: 24px
+				height: 24px
+				display: inline-block
+			
+			&.fb
+				&::after
+					content: url(../img/svgs/socials/fb.svg)
+			
+			&.tw
+				&::after
+					content: url(../img/svgs/socials/tw.svg)
+			
+			&.ig
+				&::after
+					content: url(../img/svgs/socials/ig.svg)

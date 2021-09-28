@@ -123,52 +123,85 @@ $blogSliderHeight: 520px
 $blogSliderHeightMob: 420px
 @import _homeblog
 
-.blogarticle
-	color: $dark
-	margin-bottom: 70px
+@import _blogarticle
+
+.contactpage
+	padding-bottom: 40px
 	@include plus1025()
-		margin-bottom: 90px
-	&__content
-		width: 100%
+		padding-bottom: 90px
+	&__combiner
+		display: grid
+		// justify-items: 
 		@include plus1025()
-			padding: 0 138px
-	&__cover
-		margin-bottom: 16px
-		width: 100%
-		height: 600px
-		@include plus1025()
-			max-height: 500px
-		@include plus1441()
-			max-height: 600px
-		img
-			object-fit: cover
-	&__title
-		font-family: firagobold
-		@include font(22px, 30.8px)
-		font-weight: 800
-		margin-bottom: 16px
-	&__time
-		display: flex
-		align-items: center
-		margin-bottom: 40px
-		font-family: firago
-		font-weight: 400
-		color: $dark
-		@include font(14px, 19.6px)
+			grid-template-columns: auto auto
+			justify-content: stretch
 		
-		&::before
-			content: url(../img/svgs/calendar.svg)
-			display: inline-block
-			width: 20px
-			height: 20px
-			margin-right: 6px
-	&__textbox
-		> *
-			&:not(:last-child)
-				margin-bottom: 20px
-		*
-			font-family: firago
-			font-weight: 400
-			color: $dark
-			@include font(14px, 19.6px)
-			
+	&__form
+		width: 100%
+		@include plus1025()
+			max-width: 455px
+		.ordermodal__inputs
+			width: 100%
+		button
+			max-width: unset
+	&__info
+		width: 100%
+		order: -1
+		margin-bottom: 50px
+		@include plus1025()
+			order: 0		
+			justify-self: flex-end
+			max-width: 455px
+			padding-right: 30px
+			margin-bottom: 0
+		&__list
+			width: 100%
+			display: grid
+			grid-template-columns: auto auto
+			justify-content: space-between
+			grid-gap: 30px 0
+			margin-bottom: 50px
+			a
+				color: $dark
+				font-family: firagosemibold
+				@include font(14px, 19.6px)
+				font-weight: 600
+			.mob, .mail
+				font-family: firagomedium
+				font-weight: 500
+				@include font(18px, 25.2px)
+				display: flex
+				width: max-content
+				align-self: center
+				&::before
+					display: inline-block
+					width: 24px
+					height: 24px
+					margin-right: 6px
+			.mob
+				&::before
+					content: url(../img/svgs/socials/mob.svg)
+			.mail
+				&::before
+					content: url(../img/svgs/socials/mail.svg)
+		&__leavemsg
+			font-family: firagosemibold
+			font-weight: 600
+			@include font(12px, 19.6px)
+			padding-left: 3px
+			padding-right: 3px
+			max-width: unset
+			@include plus1025()
+				font-size: 14px
+.ns.input
+	&::after
+		content: none
+		
+	ul
+		li.active
+			// padding-left: 0
+			// color: $orange
+			// @include uppercase()
+			opacity: 1
+		li
+			opacity: .8

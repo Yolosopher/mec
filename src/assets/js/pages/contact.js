@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
 	// inner functions
 	let select = ns.querySelector('select')
 	let ns_ul = ns.querySelector('ul')
+	let input_div_and_select = ns_ul.closest('.input-div.select')
 
 	;[...select.querySelectorAll('option')].forEach((option) => {
 		let newLi = document.createElement('li')
@@ -41,6 +42,9 @@ window.addEventListener('load', () => {
 				select.value = option.value
 				ns_ul.querySelector('li.active').classList.remove('active')
 				newLi.classList.add('active')
+				if (!!input_div_and_select) {
+					input_div_and_select.querySelector('.holder').innerText = option.innerText
+				}
 				// ns.classList.remove('toggled')
 			},
 			true

@@ -106,7 +106,7 @@ html(lang="en")
                         .ns
                             select(name="size")
                                 each option, i in productInfo.sizes
-                                    option(value=i+1, selected=(i === 0 && true))=option
+                                    option(value=i+1, data-price=(i + 1) * 100 selected=(i === 0 && true))=option
                             ul.ns__ul
                         .ns
                             select(name="colors")
@@ -114,7 +114,9 @@ html(lang="en")
                                     option(value=i+1, selected=(i === 0 && true))=option
                             ul.ns__ul
                     .productpage__info__bottom
-                        p.productpage__info__price=productInfo.price + ' ₾'
+                        p.productpage__info__price
+                            span=productInfo.price
+                            |  ₾
                         .productpage__info__link.btnreverse(href="#") შეგვიკვეთე ახლავე 
             .productpage__details
                 .productpage__details__each
@@ -174,6 +176,9 @@ html(lang="en")
             .ordermodal__X
             h6.ordermodal__title შეკვეთა
             .ordermodal__inputs
+                input(type="hidden", name="product_id", value=1)
+                input(type="hidden", name="size_id", value=2)
+                input(type="hidden", name="color_id", value=3)
                 label.input-div(for="orderfirstname")
                     input#orderfirstname(type="text", name="first_name", placeholder=" ")
                     span.holder სახელი
@@ -200,7 +205,7 @@ html(lang="en")
             a.orderresult__submit.btnreverse(href="rules.html") შეკვეთის პირობები 
 
         script.
-            let showorderresult = true // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+            let showorderresult = false // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
 
         include ../layouts/_footer
         include ../layouts/_scripts

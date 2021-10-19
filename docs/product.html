@@ -50,9 +50,9 @@
             <p class="productpage__info__code">#00423</p>
             <div class="ns">
               <select name="size">
-                <option value="1" selected>140 x 22 cm</option>
-                <option value="2">180 x 42 cm</option>
-                <option value="3">220 x 82 cm</option>
+                <option value="1" data-price="100" selected>140 x 22 cm</option>
+                <option value="2" data-price="200">180 x 42 cm</option>
+                <option value="3" data-price="300">220 x 82 cm</option>
               </select>
               <ul class="ns__ul"></ul>
             </div>
@@ -66,7 +66,7 @@
             </div>
           </div>
           <div class="productpage__info__bottom">
-            <p class="productpage__info__price">750 ₾</p>
+            <p class="productpage__info__price"><span>750</span> ₾</p>
             <div class="productpage__info__link btnreverse" href="#">შეგვიკვეთე ახლავე </div>
           </div>
         </div>
@@ -186,6 +186,9 @@
       <div class="ordermodal__X"></div>
       <h6 class="ordermodal__title">შეკვეთა</h6>
       <div class="ordermodal__inputs">
+        <input type="hidden" name="product_id" value="1">
+        <input type="hidden" name="size_id" value="2">
+        <input type="hidden" name="color_id" value="3">
         <label class="input-div" for="orderfirstname">
           <input id="orderfirstname" type="text" name="first_name" placeholder=" "><span class="holder">სახელი</span>
         </label>
@@ -209,7 +212,7 @@
       <div class="orderresult__smile"></div><a class="orderresult__submit btnreverse" href="rules.html">შეკვეთის პირობები </a>
     </div>
     <script>
-      let showorderresult = true // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+      let showorderresult = false // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
       
     </script>
     <footer class="footer container">

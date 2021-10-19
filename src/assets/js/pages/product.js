@@ -27,16 +27,16 @@ const imageSwiper = new Swiper('.productpage__slider__container', {
 // NICE SELECTS
 const size_id = document.querySelector('[name="size_id"]')
 const color_id = document.querySelector('[name="color_id"]')
-console.log(size_id)
-console.log(color_id)
+// console.log(size_id)
+// console.log(color_id)
 
 const setSizeId = (val) => {
 	size_id.value = val
-	console.log(size_id)
+	// console.log(size_id)
 }
 const setColorId = (val) => {
 	color_id.value = val
-	console.log(color_id)
+	// console.log(color_id)
 }
 
 const productpage__info__price_span = document.querySelector(
@@ -77,11 +77,11 @@ const updatePricer = (price) => {
 					updatePricer(option.dataset.price)
 				}
 				console.log(option.value)
-				if (select.getAttribute('name') === 'size') {
+				if (select.id === 'size-select') {
 					setSizeId(option.value)
 					// size_id.value = option.value
 				}
-				if (select.getAttribute('name') === 'colors') {
+				if (select.id === 'color-select') {
 					setColorId(option.value)
 					// size_id.value = option.value
 				}

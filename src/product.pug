@@ -104,12 +104,12 @@ html(lang="en")
                         h1.productpage__info__title=productInfo.title
                         p.productpage__info__code=productInfo.code
                         .ns
-                            select(name="size")
+                            select#size-select(name="size")
                                 each option, i in productInfo.sizes
                                     option(value=i+1, data-price=(i + 1) * 100 selected=(i === 0 && true))=option
                             ul.ns__ul
                         .ns
-                            select(name="colors")
+                            select#color-select(name="colors")
                                 each option, i in productInfo.colors
                                     option(value=i+1, selected=(i === 0 && true))=option
                             ul.ns__ul
@@ -205,7 +205,7 @@ html(lang="en")
             a.orderresult__submit.btnreverse(href="rules.html") შეკვეთის პირობები 
 
         script.
-            let showorderresult = false // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+            let showorderresult = true // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
 
         include ../layouts/_footer
         include ../layouts/_scripts

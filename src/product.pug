@@ -96,8 +96,8 @@ html(lang="en")
                     .productpage__slider__container.swiper-container
                         .productpage__slider__wrapper.swiper-wrapper
                             each slide, i in slides
-                                .productpage__slider__slide.swiper-slide
-                                    img(src=slide, alt="")
+                                .productpage__slider__slide.swiper-slide.noswiping
+                                    img(src=slide, alt="" data-image=slide)
                     .productpage__slider__pagination
                 .productpage__info
                     .productpage__info__top
@@ -111,7 +111,7 @@ html(lang="en")
                         .ns
                             select#color-select(name="colors")
                                 each option, i in productInfo.colors
-                                    option(value=i+1, selected=(i === 0 && true))=option
+                                    option(value=i+1, selected=(i === 0 && true), data-image=slides[i])=option
                             ul.ns__ul
                     .productpage__info__bottom
                         p.productpage__info__price
@@ -205,7 +205,7 @@ html(lang="en")
             a.orderresult__submit.btnreverse(href="rules.html") შეკვეთის პირობები 
 
         script.
-            let showorderresult = true // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+            let showorderresult = false // "შეკვეთა მიღებულია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
 
         include ../layouts/_footer
         include ../layouts/_scripts

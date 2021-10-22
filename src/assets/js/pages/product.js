@@ -20,8 +20,10 @@ const imageSwiper = new Swiper('.productpage__slider__container', {
 		type: 'bullets',
 		bulletClass: 'productpage__slider__pagination__bullet',
 		bulletActiveClass: 'active',
-		clickable: true,
+		// clickable: true,
 	},
+	noSwiping: true,
+	noSwipingClass: "noswiping"
 })
 
 // NICE SELECTS
@@ -64,6 +66,9 @@ const updatePricer = (price) => {
 		if (option.dataset.price) {
 			newLi.dataset.price = option.dataset.price
 		}
+		if (option.dataset.image) {
+			newLi.dataset.image = option.dataset.image
+		}
 		if (option.selected) newLi.classList.add('active')
 		ns_ul.appendChild(newLi)
 		newLi.addEventListener(
@@ -84,6 +89,17 @@ const updatePricer = (price) => {
 				if (select.id === 'color-select') {
 					setColorId(option.value)
 					// size_id.value = option.value
+				}
+				if (option.dataset.image) {
+					[...document.querySelectorAll('.productpage__slider__slide')].forEach((each, ind) => {
+						if (String(each.querySelector('img').dataset.image) === String(option.dataset.image)) {
+							// console.log(each.querySelector('img').dataset.image)
+							// console.log(option.dataset.image)
+							// console.log('compare result: ', String(each.querySelector('img').dataset.image) === String(option.dataset.image))
+							imageSwiper.slideTo(ind)
+						}
+					})
+
 				}
 			},
 			true

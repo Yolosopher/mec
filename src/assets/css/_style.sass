@@ -125,91 +125,27 @@ $blogSliderHeightMob: 420px
 
 @import _blogarticle
 
-.contactpage
-	padding-bottom: 40px
-	@include plus1025()
-		min-height: calc(100vh - #{100px + 105px + 20px})
-		padding-bottom: 90px
-	&__combiner
-		display: grid
-		// justify-items: 
-		@include plus1025()
-			grid-template-columns: auto auto
-			justify-content: stretch
-		
-	&__form
-		width: 100%
-		@include plus1025()
-			max-width: 455px
-		.ordermodal__inputs
-			width: 100%
-		button
-			max-width: unset
-		input, textarea
-			@include font(14px, 19.6px)
-			&::placeholder
-				@include font(14px, 19.6px)
-		.holder
-			@include font(14px, 19.6px)	
-	&__info
-		width: 100%
-		order: -1
+@import _contactpage
+
+
+.designers
+	&__title
 		margin-bottom: 50px
 		@include plus1025()
-			order: 0		
-			justify-self: flex-end
-			max-width: 455px
-			padding-right: 30px
-			margin-bottom: 0
-		&__list
-			width: 100%
-			display: grid
-			grid-template-columns: auto auto
-			justify-content: space-between
-			grid-gap: 30px 0
-			margin-bottom: 50px
-			a
-				color: $dark
-				font-family: firagosemibold
-				@include font(14px, 19.6px)
-				font-weight: 600
-			.mob, .mail
-				font-family: firagomedium
-				font-weight: 500
-				@include font(18px, 25.2px)
-				display: flex
-				width: max-content
-				align-self: center
-				&::before
-					display: inline-block
-					width: 24px
-					height: 24px
-					margin-right: 6px
-			.mob
-				&::before
-					content: url(../img/svgs/socials/mob.svg)
-			.mail
-				&::before
-					content: url(../img/svgs/socials/mail.svg)
-		&__leavemsg
-			font-family: firagosemibold
-			font-weight: 600
-			@include font(12px, 19.6px)
-			padding-left: 3px
-			padding-right: 3px
-			max-width: unset
-			text-align: center
-			@include plus1025()
-				font-size: 14px
-.ns.input
-	&::after
-		content: none
-		
-	ul
-		li.active
-			// padding-left: 0
-			// color: $orange
-			// @include uppercase()
-			opacity: 1
-		li
-			opacity: .8
+			margin-bottom: 90px
+	&__descr
+		@include maxcolumn(4)
+		min-height: 76px
+		margin-bottom: 30px
+		*
+			text-align: left
+	&__innertitle
+		text-align: left
+	&__list
+		@media screen and ( max-width: 500px )
+			grid-template-columns: 100%
+	&__item
+		height: unset
+		&__imgbox
+			img
+				object-fit: cover

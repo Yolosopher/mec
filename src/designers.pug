@@ -1,0 +1,72 @@
+- const title = 'designers'
+-
+    const designers = [
+        {
+            name: "მარიამ თოფურია",
+            image: 'assets/img/designers/tofuria.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მიხეილ გოგობერიძე",
+            image: 'assets/img/designers/gogiberidze.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მარიამ თოფურია",
+            image: 'assets/img/designers/tofuria1.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მიხეილ გოგობერიძე",
+            image: 'assets/img/designers/gogiberidze2.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მარიამ თოფურია",
+            image: 'assets/img/designers/tofuria.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მიხეილ გოგობერიძე",
+            image: 'assets/img/designers/gogiberidze.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მარიამ თოფურია",
+            image: 'assets/img/designers/tofuria1.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+        {
+            name: "მიხეილ გოგობერიძე",
+            image: 'assets/img/designers/gogiberidze2.png',
+            descr: 'ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.',
+        },
+    ]
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            section.designers.container.pagearticle
+                .designers__content
+                    h1.designers__title.pagetitle დიზაინერები
+                ul.newproducts__list.designers__list
+                    each designer, i in designers
+                        li.newproducts__list__item.designers__item
+                            .newproducts__list__item__imgbox.designers__item__imgbox
+                                img(src=designer.image, alt=designer.name)
+                            h3.designers__innertitle.newproducts__list__item__title=designer.name
+                            .designers__descr.default-ul
+                                p=designer.descr
+                            a.newproducts__list__item__link.btn(href="designer.html") დეტალურად ნახვა
+            section.productsresult__controls.container
+                .productsresult__controls__pagination
+                    each xxxx, i in Array(13)
+                        a(href="product.html", class=(i === 3 && 'active'))=i + 1
+                .productsresult__controls__nav
+                    a.productsresult__controls__nav__left(href="products.html")
+                    a.productsresult__controls__nav__right(href="products.html")
+        include ../layouts/_footer
+        include ../layouts/_scripts

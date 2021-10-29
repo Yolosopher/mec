@@ -9,7 +9,7 @@ import ugl from 'gulp-uglify-es'
 import notify from 'gulp-notify'
 import browserS from 'browser-sync'
 
-const jsPath = 'src/assets/js/pages/home.js'
+// const jsPath = 'src/assets/js/pages/home.js'
 const cssPath = 'src/assets/css/**/*.scss'
 const pugPath = 'src/**/*.pug'
 const browserSync = browserS.create()
@@ -35,7 +35,7 @@ export const imgTask = () => {
 
 export const jsTask = () => {
 	return gulp
-		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js', 'src/assets/js/pages/blog.js', 'src/assets/js/pages/blogs.js', 'src/assets/js/pages/rules.js'])
+		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js', 'src/assets/js/pages/blog.js', 'src/assets/js/pages/blogs.js', 'src/assets/js/pages/rules.js', 'src/assets/js/pages/designer.js', 'src/assets/js/pages/designers.js'])
 		.pipe(
 			webpack({
 				entry: {
@@ -46,7 +46,9 @@ export const jsTask = () => {
 					products: './src/assets/js/pages/products.js',
 					blog: './src/assets/js/pages/blog.js',
 					blogs: './src/assets/js/pages/blogs.js',
-					rules: './src/assets/js/pages/rules.js'
+					rules: './src/assets/js/pages/rules.js',
+					designer: './src/assets/js/pages/designer.js',
+					designers: './src/assets/js/pages/designers.js'
 				},
 				output: {
 					filename: '[name].min.js',

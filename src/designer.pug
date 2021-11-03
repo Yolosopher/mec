@@ -1,0 +1,112 @@
+- const title = 'designer'
+-
+    const blogs = [
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+        'assets/img/blog/3.png',
+        'assets/img/blog/1.png',
+        'assets/img/blog/2.png',
+        'assets/img/blog/3.png',
+    ]
+
+-
+    const products = [
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700',
+            discount: 43
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ტელევიზორის სადგამი',
+            image: 'assets/img/products/4.png',
+            quantity: 125,
+            price: 114.42,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო 2',
+            image: 'assets/img/products/5.png',
+            quantity: 167,
+            price: 714.10,
+            pricerange: '500-700'
+        },
+                {
+            title: 'მაგიდა',
+            image: 'assets/img/products/1.png',
+            quantity: 97,
+            price: 655.25,
+            pricerange: '500-700'
+        },
+        {
+            title: 'დეკორატიული თარო',
+            image: 'assets/img/products/2.png',
+            quantity: 14,
+            price: 423.00,
+            pricerange: '500-700'
+        },
+        {
+            title: 'ბავშვის კუთხე',
+            image: 'assets/img/products/3.png',
+            quantity: 27,
+            price: 898.91,
+            pricerange: '500-700'
+        }
+    ]
+
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            article.designerarticle.container.pagearticle
+                .designerarticle__imgbox
+                    img(src="assets/img/designers/main.png", alt="მარიამ თოფურია")
+                .designerarticle__textcontent.default-ul
+                    p
+                        | ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით. გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევითი ტექსტი სულაც არაა. მისი ფესვები ჯერკიდევ ჩვ. წ. აღ-მდე 45 წლის დროინდელი კლასიკური ლათინური ლიტერატურიდან მოდის. ვირჯინიის შტატში მდებარე ჰემპდენ-სიდნეის კოლეჯის პროფესორმა რიჩარდ მაკკლინტოკმა აიღო ერთ-ერთი ყველაზე იშვიათი ლათინური სიტყვა "consectetur" Lorem Ipsum-პასაჟიდან და გადაწყვიტა მოეძებნა იგი კლასიკურ ლიტერატურაში. ძიება შედეგიანი აღმოჩნდა — ტექსტი Lorem Ipsum გადმოწერილი ყოფილა ციცერონის "de Finibus Bonorum et Malorum"-ის 1.10.32 და 1.10.33 თავებიდან. ეს წიგნი ეთიკის თეორიის ტრაქტატია, რომელიც რენესანსის პერიოდში ძალიან იყო გავრცელებული. Lorem Ipsum-ის პირველი ხაზი, "Lorem ipsum dolor sit amet..." სწორედ ამ წიგნის 1.10.32 თავიდანაა.
+                    p
+                        | მათთვის, ვისაც აინტერესებს, ქვევით მოყვანილია Lorem Ipsum-ის ორიგინალი ნაწყვეტი 1500-იანი წლებიდან. ასევე შეგიძლიათ ნახოთ 1.10.32 და 1.10.33 თავები ციცერონის "de Finibus Bonorum et Malorum"-დან, რომელსაც თან ერთვის 1914 წელს ჰ. რექჰამის შესრულებული ინგლისურენოვანი თარგმანი.
+                .designerarticle__headings
+                    h1 მარიამ თოფურია
+                    p ინტერიერის დიზაინერი
+        section.section.homecategory.alsointeresting
+            .section__header.container
+                h6.section__title მარიამის შექმნილი პროდუქცია
+                .homecategory__slider__nav
+                    .homecategory__slider__nav__left
+                    .homecategory__slider__nav__right
+            .homecategory__slider
+                .homecategory__slider__container.swiper-container
+                    .homecategory__slider__wrapper.swiper-wrapper
+                        each product, i in products
+                            .newproducts__list__item.swiper-slide
+                                .newproducts__list__item__imgbox
+                                    img(src=product.image, alt=product.title)
+                                h3.newproducts__list__item__title=product.title
+                                p.newproducts__list__item__price
+                                    if product.discount
+                                        span.discount=product.discount + ' ₾'
+                                    span=product.pricerange + ' ₾'
+                                a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი
+  
+        include ../layouts/_footer
+        include ../layouts/_scripts

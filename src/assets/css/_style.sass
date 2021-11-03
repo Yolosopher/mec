@@ -149,3 +149,109 @@ $blogSliderHeightMob: 420px
 		&__imgbox
 			img
 				object-fit: cover
+
+
+$black28: #282828
+
+.designerarticle
+	position: relative
+	&__headings
+		position: absolute
+		top: 0
+		right: 0
+		max-width: 200px
+		text-align: right
+		@include plus1025()
+			max-width: 400px
+		h1
+			font-weight: 700
+			@include font(34px, 47.6px)
+			color: $black28
+			font-family: firagobold
+			margin-bottom: 16px
+			@include uppercase()
+			@include plus1025()
+
+				@include font(64px, 70px)
+		p
+			font-family: firagobook
+			font-weight: 350
+			color: $black28
+			@include font(14px, 19.6px)
+
+	$black28: #282828
+
+.designerarticle
+	position: relative
+	display: grid
+	width: 100%
+	padding-bottom: 50px
+	@include plus1025()
+		padding-bottom: 90px
+	&__headings
+		order: -1
+		max-width: 200px
+		text-align: right
+		position: static
+		justify-self: flex-end
+		margin-bottom: 30px
+		@include plus1025()
+			margin-bottom: 0
+			position: absolute
+			top: 20px
+			right: 20px
+			top: 40px
+			max-width: 400px
+		h1
+			font-weight: 700
+			@include font(34px, 47.6px)
+			color: $black28
+			font-family: firagobold
+			margin-bottom: 16px
+			@include uppercase()
+			@include plus1025()
+
+				@include font(64px, 70px)
+		p
+			font-family: firagobook
+			font-weight: 350
+			color: $black28
+			@include font(14px, 19.6px)
+
+	&__imgbox
+		width: 100%
+		height: 371px
+		@include plus700()
+			height: 471px
+		@include plus1025()
+			width: 57%
+			height: auto
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: top
+			@include plus1025()
+				height: auto
+	&__textcontent
+		margin: 0 10px
+		padding: 16px
+		position: relative
+		background-color: white
+		bottom: 30px
+		font-family: firagobook
+		@include font(14px, 19.6px)
+		font-weight: 350
+		color: $black28
+
+		@include plus1025()
+			justify-self: flex-end
+			width: 50%
+			margin: 0
+			bottom: 512px
+			margin-bottom: -512px
+			padding: 56px
+		@include plus1441()
+			padding: 118px
+		> *:not(:last-child)
+			margin-bottom: 20px

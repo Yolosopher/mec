@@ -255,3 +255,25 @@ $black28: #282828
 			padding: 118px
 		> *:not(:last-child)
 			margin-bottom: 20px
+
+
+.designers_products
+	height: unset !important
+	.homecategory__slider
+		border-bottom: none !important
+		height: unset !important
+	.homecategory__slider__container
+		height: unset !important
+	.homecategory__slider__wrapper
+		height: unset !important
+		display: grid
+		grid-template-columns: 100%
+		@include plus700()
+			grid-template-columns: repeat(2, 1fr)
+		@include plus1025()
+			grid-template-columns: repeat(4, 1fr)
+
+
+.designers_body
+	.footer
+		border-top: none !important

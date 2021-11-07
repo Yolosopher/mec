@@ -74,7 +74,7 @@ doctype html
 html(lang="en")
     head
         include ../layouts/_head
-    body
+    body.designers_body
         include ../layouts/_header
         main
             article.designerarticle.container.pagearticle
@@ -88,25 +88,23 @@ html(lang="en")
                 .designerarticle__headings
                     h1 მარიამ თოფურია
                     p ინტერიერის დიზაინერი
-        section.section.homecategory.alsointeresting
+        section.section.homecategory.alsointeresting.designers_products
             .section__header.container
                 h6.section__title მარიამის შექმნილი პროდუქცია
-                .homecategory__slider__nav
-                    .homecategory__slider__nav__left
-                    .homecategory__slider__nav__right
             .homecategory__slider
-                .homecategory__slider__container.swiper-container
-                    .homecategory__slider__wrapper.swiper-wrapper
+                .homecategory__slider__container
+                    .homecategory__slider__wrapper
                         each product, i in products
-                            .newproducts__list__item.swiper-slide
-                                .newproducts__list__item__imgbox
-                                    img(src=product.image, alt=product.title)
-                                h3.newproducts__list__item__title=product.title
-                                p.newproducts__list__item__price
-                                    if product.discount
-                                        span.discount=product.discount + ' ₾'
-                                    span=product.pricerange + ' ₾'
-                                a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი
-  
+                            if (i < 4)
+                                .newproducts__list__item
+                                    .newproducts__list__item__imgbox
+                                        img(src=product.image, alt=product.title)
+                                    h3.newproducts__list__item__title=product.title
+                                    p.newproducts__list__item__price
+                                        if product.discount
+                                            span.discount=product.discount + ' ₾'
+                                        span=product.pricerange + ' ₾'
+                                    a.newproducts__list__item__link.btn(href="product.html") ნახე პროდუქტი
+    
         include ../layouts/_footer
         include ../layouts/_scripts

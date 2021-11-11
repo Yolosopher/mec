@@ -11,7 +11,6 @@
 			align-items: center
 			justify-content: space-between
 
-
 	&__slider
 		margin-bottom: 82px
 		@include plus1025()
@@ -69,6 +68,28 @@
 			margin-bottom: 40px
 			@include plus1025()
 				margin-bottom: 0
+
+		&__bottom
+			&__combiner
+				margin-bottom: 20px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.order_rules
+					font-family: firagobold
+					font-weight: 700
+					color: #FF4747
+					@include font(18px, 25.2px)
+					display: flex
+					align-items: center
+					width: max-content
+					&::before
+						content: url(../img/svgs/info-circle.svg)
+						display: inline-block
+						width: 24px
+						height: 24px
+						margin-right: 12px
+
 		&__title
 			@include font(22px, 30.8px)
 			font-family: firagobold
@@ -86,10 +107,9 @@
 			font-family: firagobold
 			font-weight: 700
 			// color: $dark
-			margin-bottom: 20px
 			@include uppercase()
 			@include font(24px, 33.6px)
-			
+
 		&__link
 			max-width: none
 
@@ -119,11 +139,11 @@
 				display: flex
 				align-items: center
 				margin-bottom: 10px
-				
+
 				@include font(14px, 17.09px)
 				font-family: firagosemibold
 				@include uppercase()
-				
+
 				&::before
 					content: url(../img/svgs/plus.svg)
 					display: inline-block
@@ -150,7 +170,6 @@
 					&::before
 						content: url(../img/svgs/minus.svg)
 
-				
 .ns
 	position: relative
 	width: 100%
@@ -212,14 +231,14 @@
 			font-weight: 500
 			color: $dark
 			@include font(14px)
-			
+
 			flex-shrink: 0
 			&:not(.active)
 				border-top: 1px solid $borderLight
 			&.active
 
 				order: -1
-	
+
 // .input-div
 // 	// display: block
 // 	// height: 35px
@@ -250,7 +269,7 @@
 		width: 100%
 		overflow: hidden
 		height: 25px
-		
+
 		position: absolute
 		top: 0
 		left: 0
@@ -280,8 +299,7 @@
 			&::after
 				transition-duration: .1s
 				transform: rotate(0deg)
-				
-		
+
 	&.invalid.invalid-shown
 		color: $red
 		border-color: $red
@@ -295,9 +313,6 @@
 		@include uppercase()
 		transition: .05s ease-out
 		opacity: 1
-
-	
-		
 
 .ordermodal
 	z-index: 100
@@ -364,8 +379,6 @@
 		width: 100%
 		// max-width: none !important
 
-
-
 .orderresult
 	z-index: 100
 	position: fixed
@@ -430,7 +443,6 @@
 			width: 120px
 			height: 120px
 			display: inline-block
-			
 
 	&__submit
 		width: 100%

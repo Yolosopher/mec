@@ -62,7 +62,7 @@
             price: 714.10,
             pricerange: '500-700'
         },
-                {
+            {
             title: 'მაგიდა',
             image: 'assets/img/products/1.png',
             quantity: 97,
@@ -113,10 +113,18 @@ html(lang="en")
                                 each option, i in productInfo.colors
                                     option(value=i+1, selected=(i === 0 && true), data-image=slides[i])=option
                             ul.ns__ul
+                        .designer_info
+                            .designer_info__imgbox 
+                                img(src="assets/img/designers/main.png" alt="")
+                            .designer_info__txt
+                                h4 მარიამ თოფურია
+                                p ინტერიერის დიზაინერი
                     .productpage__info__bottom
-                        p.productpage__info__price
-                            span=productInfo.price
-                            |  ₾
+                        .productpage__info__bottom__combiner
+                            p.productpage__info__price
+                                span=productInfo.price
+                                |  ₾
+                            a.order_rules(href="#") შეკვეთის პირობები
                         .productpage__info__link.btnreverse(href="#") შეგვიკვეთე ახლავე 
             .productpage__details
                 .productpage__details__each
@@ -176,23 +184,23 @@ html(lang="en")
             .ordermodal__X
             h6.ordermodal__title შეკვეთა
             .ordermodal__inputs
-                input(type="hidden", name="product_id", value=1)
-                input(type="hidden", name="size_id", value=2)
-                input(type="hidden", name="color_id", value=3)
+                input(type="hidden" name="product_id", value=1)
+                input(type="hidden" name="size_id", value=2)
+                input(type="hidden" name="color_id", value=3)
                 label.input-div(for="orderfirstname")
-                    input#orderfirstname(type="text", name="first_name", placeholder=" ")
+                    input#orderfirstname(type="text" name="first_name" placeholder=" ")
                     span.holder სახელი
 
                 label.input-div(for="orderlastname")
-                    input#orderlastname(type="text", name="last_name", placeholder=" ")
+                    input#orderlastname(type="text" name="last_name" placeholder=" ")
                     span.holder გვარი
 
                 label.input-div(for="orderemail")
-                    input#orderemail(type="text", name="email", placeholder=" ")
+                    input#orderemail(type="text" name="email" placeholder=" ")
                     span.holder ელ.ფოსტა
-                
+
                 label.input-div(for="ordertel")
-                    input#ordertel(type="text", name="tel", placeholder=" ")
+                    input#ordertel(type="text" name="tel" placeholder=" ")
                     span.holder ტელ. ნომერი
             button.ordermodal__submit.btnreverse(type="submit") შეგვიკვეთე 
 

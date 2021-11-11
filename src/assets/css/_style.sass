@@ -31,19 +31,19 @@ img
 	border: 1px solid $dark
 	@include transition()
 	@include uppercase()
-	
+
 	@media screen and ( max-width: 700px )
 		min-width: 100%
 	&:hover
 		background-color: $dark
 		color: #fff
 .btnreverse
-	color: #fff 
-	border-color: $dark 
-	background-color: $dark 
+	color: #fff
+	border-color: $dark
+	background-color: $dark
 	&:hover
-		background-color: #fff 
-		color: $dark 
+		background-color: #fff
+		color: $dark
 .section
 	margin-bottom: 70px
 	@include plus1025()
@@ -63,13 +63,11 @@ img
 		@include plus1025()
 			@include font(26px, 36.4px)
 
-
 @import _header
 @import _footer
 
 @import _homehero
 
-		
 $homecategoryHeight: 410px
 // for productinpage
 $homecategoryHeightProductin: 500px
@@ -84,7 +82,6 @@ $newproductsHeightMob: 350px
 $newproductsHeight: 500px
 @import _homenewproducts
 
-
 $homeaboutheight: 496px
 $homeaboutheightMob: 450px
 @import _homeabout
@@ -97,7 +94,7 @@ $homeaboutheightMob: 450px
 	@include font(34px, 47.6px)
 	@include plus1025()
 		@include font(54px, 75.6px)
-		
+
 .pagearticle
 	padding-top: 20px
 	@include plus1025()
@@ -105,14 +102,11 @@ $homeaboutheightMob: 450px
 
 @import _pageabout
 
-
 @import _pageproducts
-
 
 $imageSliderHeight: 250px
 $imageSliderHeightMob: 400px
 @import _pageproduct
-
 
 .blogsarticle__title
 	margin-bottom: 30px
@@ -126,7 +120,6 @@ $blogSliderHeightMob: 420px
 @import _blogarticle
 
 @import _contactpage
-
 
 .designers
 	&__title
@@ -149,7 +142,6 @@ $blogSliderHeightMob: 420px
 		&__imgbox
 			img
 				object-fit: cover
-
 
 $black28: #282828
 
@@ -179,7 +171,7 @@ $black28: #282828
 			color: $black28
 			@include font(14px, 19.6px)
 
-	$black28: #282828
+			$black28: #282828
 
 .designerarticle
 	position: relative
@@ -256,7 +248,6 @@ $black28: #282828
 		> *:not(:last-child)
 			margin-bottom: 20px
 
-
 .designers_products
 	height: unset !important
 	.homecategory__slider
@@ -273,7 +264,34 @@ $black28: #282828
 		@include plus1025()
 			grid-template-columns: repeat(4, 1fr)
 
-
 .designers_body
 	.footer
 		border-top: none !important
+
+.designer_info
+	display: flex
+	grid-gap: 16px
+	align-items: center
+	margin-top: 20px
+	&__imgbox
+		height: 60px
+		width: 60px
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+	&__txt
+		display: flex
+		flex-direction: column
+		justify-content: center
+		grid-gap: 4px
+		h4
+			font-family: firagobold
+			@include uppercase()
+			color: $black28
+			@include font(18px, 1)
+		p
+			font-family: firagobook
+			font-weight: 350
+			color: $black28
+			@include font(14px, 19.6px)

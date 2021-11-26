@@ -1,6 +1,10 @@
 @import _fonts
 @import _vars
 @import _defaults
+
+*
+	border-collapse: collapse
+
 body
 	background-color: $bodyBg
 	// min-height: 200vh
@@ -142,6 +146,12 @@ $blogSliderHeightMob: 420px
 		&__imgbox
 			img
 				object-fit: cover
+	.designers__item
+		border-bottom-color: transparent !important
+		&:nth-last-of-type(n+5)
+			border-bottom-color: $borderLight !important
+	+ .productsresult__controls
+		border-top: 1px solid $borderLight
 
 $black28: #282828
 

@@ -13,8 +13,8 @@ Swiper.use([Navigation, Pagination])
 const heroSwiper = new Swiper('.hero__slider__container', {
 	slidesPerView: 1,
 	spaceBetween: 20,
-	loop: true,
-    speed: 700,
+	// loop: [...document.querySelectorAll('.hero__slider__container .swiper-slide')].length > 2,
+	speed: 700,
 	// autoplay: {
     //     disableOnInteraction: false,
 	// 	delay: 1000,

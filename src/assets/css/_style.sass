@@ -161,11 +161,15 @@ $black28: #282828
 		position: absolute
 		top: 0
 		right: 0
-		max-width: 200px
+		// display: none !important
+		max-width: unset !important
 		text-align: right
+		max-width: 400px
+		overflow: hidden
 		@include plus1025()
-			max-width: 400px
+			// max-width: 400px
 		h1
+			word-spacing: 9999rem
 			font-weight: 700
 			@include font(34px, 47.6px)
 			color: $black28

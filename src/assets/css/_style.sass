@@ -309,3 +309,62 @@ $black28: #282828
 			font-weight: 350
 			color: $black28
 			@include font(14px, 19.6px)
+
+
+.homearticle
+	&__grid
+		display: grid
+		grid-gap: 40px
+		@include plus1025()
+			grid-template-columns: 1fr 50%
+			grid-gap: 10px
+			height: 436px
+		&__left
+			height: 100%
+			.section__title
+				font-family: firagobook
+				font-weight: 400
+				margin-bottom: 20px
+				@include plus1025()
+					max-width: 540px
+					margin-bottom: 40px
+				strong
+					font-family: firagobold
+					font-weight: 700
+			&__textbox
+				@include font(14px, 22.4px)
+				color: $dark
+				font-family: firagobook
+				font-weight: 350
+				margin-bottom: 20px
+				@include plus1025()
+					margin-bottom: 40px
+			&__links
+				display: grid
+				align-items: center
+				grid-template-columns: 1fr 1fr
+				grid-gap: 32px
+				@include plus1025()
+					// grid-gap: 32px
+					max-width: max-content
+				.linkbtn
+					@include uppercase()
+					font-weight: 700
+					font-family: firagosemibold
+					@include font(14px, 19.6px)
+					color: $dark
+
+		&__right
+			order: -1
+			height: 200px
+			width: 100%
+			background-image: url(../img/homearticle_cover.png)
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center
+			@include plus700()
+				height: 400px
+			@include plus1025()
+				height: 100%
+				order: 0
+

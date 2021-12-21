@@ -1,0 +1,54 @@
+- const title = 'register'
+
+doctype html
+html(lang="en")
+    head
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        main
+            section.registerpage.contactpage.container.pagearticle
+                h1.aboutarticle__title.pagetitle რეგისტრაცია
+                .registerpage__combiner.contactpage__combiner
+                    form.contactpage__form.registerpage__form(action="/register")
+                        .ordermodal__inputs
+                            label.input-div(for="registerfirstname")
+                                input#registerfirstname(type="text", name="first_name", placeholder=" " required)
+                                span.holder სახელი
+
+                            label.input-div(for="registerlastname")
+                                input#registerlastname(type="text", name="last_name", placeholder=" " required)
+                                span.holder გვარი
+                            label.input-div(for="registertel")
+                                input#registertel(type="text", name="tel", placeholder=" " required)
+                                span.holder ტელ. ნომერი
+                            label.input-div(for="registeremail")
+                                input#registeremail(type="text", name="email", placeholder=" ")
+                                span.holder ელ.ფოსტა
+                            label.input-div(for="registerdribbble")
+                                input#registerdribbble(type="text", name="dribbble", placeholder=" ")
+                                span.holder dribbble
+                            label.input-div(for="registerbehance")
+                                input#registerbehance(type="text", name="behance", placeholder=" ")
+                                span.holder behance
+                                
+                        button.ordermodal__submit.btnreverse(type="submit") რეგისტრაცია 
+
+                    .registerpage__info
+                      .default-ul
+                        p ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს.
+                        p Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია.
+                      a.linkbtn(href="rules.html") გაიგე მეტი ამის შესახებ							
+
+        .orderresult__bg
+        .orderresult
+            .orderresult__X
+            h6.orderresult__title მოთხოვნა გაგზავნილია
+            p.orderresult__text თქვენი მოთხოვნა ავეჯის დიზაინერის რეგისტრაციაზე წარმატებით გაიგზავნა. ჩვენ მალე გიპასუხებთ.
+            .orderresult__smile
+            a.orderresult__submit.btnreverse(href="index.html") მთავარი გვერდი 
+
+        script.
+            let showoffersent = true // "მოთხოვნა გაგზავნილია" მოდალის გამომჩენი - გადავაკეთოთ true-დ
+        include ../layouts/_footer
+        include ../layouts/_scripts

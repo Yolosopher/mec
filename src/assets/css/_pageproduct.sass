@@ -278,6 +278,15 @@
 				bottom: 100%
 				@include font(12px, 16.8px)
 				opacity: .3
+		&[required]
+			+ .holder
+				&::after
+					content: '*'
+					font-family: inherit
+					font-weight: inherit
+					color: #FF3737
+					display: inline-block
+					margin-left: 5px
 	&.select
 		padding-top: 36px
 		overflow: hidden
@@ -443,6 +452,10 @@
 			width: 120px
 			height: 120px
 			display: inline-block
-
+	&__text
+		@include font(14px, 19.6px)
+		text-align: center
+		font-weight: 350
+		font-family: firagobook
 	&__submit
 		width: 100%

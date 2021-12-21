@@ -347,12 +347,7 @@ $black28: #282828
 				@include plus1025()
 					// grid-gap: 32px
 					max-width: max-content
-				.linkbtn
-					@include uppercase()
-					font-weight: 700
-					font-family: firagosemibold
-					@include font(14px, 19.6px)
-					color: $dark
+
 
 		&__right
 			order: -1
@@ -368,3 +363,23 @@ $black28: #282828
 				height: 100%
 				order: 0
 
+.registerpage__combiner
+	grid-gap: 40px
+	@include plus1025()
+		grid-gap: 50px
+		// grid-template-columns: 1fr
+.registerpage__info
+	@include plus1025()
+		grid-row: 2 / 3
+		grid-column: 2 / 3
+		max-width: 572px
+		justify-self: flex-end
+	.default-ul
+		margin-bottom: 46px
+
+.linkbtn
+	@include uppercase()
+	font-weight: 700
+	font-family: firagosemibold
+	@include font(14px, 19.6px)
+	color: $dark

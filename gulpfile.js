@@ -35,7 +35,7 @@ export const imgTask = () => {
 
 export const jsTask = () => {
 	return gulp
-		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js', 'src/assets/js/pages/blog.js', 'src/assets/js/pages/blogs.js', 'src/assets/js/pages/rules.js', 'src/assets/js/pages/designer.js', 'src/assets/js/pages/designers.js'])
+		.src(['src/assets/js/pages/home.js', 'src/assets/js/pages/about.js', 'src/assets/js/pages/contact.js', 'src/assets/js/pages/product.js', 'src/assets/js/pages/products.js', 'src/assets/js/pages/blog.js', 'src/assets/js/pages/blogs.js', 'src/assets/js/pages/rules.js', 'src/assets/js/pages/designer.js', 'src/assets/js/pages/designers.js', 'src/assets/js/pages/register.js'])
 		.pipe(
 			webpack({
 				entry: {
@@ -48,7 +48,8 @@ export const jsTask = () => {
 					blogs: './src/assets/js/pages/blogs.js',
 					rules: './src/assets/js/pages/rules.js',
 					designer: './src/assets/js/pages/designer.js',
-					designers: './src/assets/js/pages/designers.js'
+					designers: './src/assets/js/pages/designers.js',
+					register: './src/assets/js/pages/register.js',
 				},
 				output: {
 					filename: '[name].min.js',

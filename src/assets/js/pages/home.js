@@ -41,15 +41,15 @@ const heroSwiper = new Swiper('.hero__slider__container', {
 })
 
 const categorySwiper = new Swiper('.homecategory__slider__container', {
-	slidesPerView: 1.0373,
-	breakpoints: {
-		700: {
-			slidesPerView: 2,
-		},
-		1025: {
-			slidesPerView: 4,
-		},
-	},
+	slidesPerView: 'auto',
+	// breakpoints: {
+	// 	700: {
+	// 		slidesPerView: 2,
+	// 	},
+	// 	1025: {
+	// 		slidesPerView: 4,
+	// 	},
+	// },
 	navigation: {
 		nextEl: '.homecategory__slider__nav__right',
 		prevEl: '.homecategory__slider__nav__left',

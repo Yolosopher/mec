@@ -12,7 +12,7 @@
             // height: $homecategoryHeight
         &__slide
             // height: max-content
-            
+            display: block
             padding: 20px
             padding-right: 21px
             border-right: 1px solid $borderLight
@@ -38,7 +38,7 @@
                 bottom: 66px
                 left: 40px
                 z-index: 2
-                a
+                span, a
                     @include maxcolumn(1)
                     font-family: firagobold
                     font-weight: 700
@@ -63,6 +63,15 @@
                 // font-family: firagothin
                 font-weight: 400 !important
                 @include font(14px, 16.55px)
+            &::before
+                content: url(../img/svgs/homecat-arrow-right.svg)
+                display: inline-block
+                position: absolute
+                bottom: 40px
+                right: -24px
+                z-index: 2
+                opacity: 0
+                transition: .3s right ease-out, .3s opacity ease-out
             &::after
                 content: ''
                 display: inline-block
@@ -77,6 +86,9 @@
             &:hover
                 &::after
                     box-shadow: inset 0px -90px 30px -30px rgba(40, 40, 40, .2)
+                &::before
+                    right: 40px
+                    opacity: 1
         &__nav
             display: grid
             grid-template-columns: 24px 24px

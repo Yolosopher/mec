@@ -22,6 +22,7 @@ const imageSwiper = new Swiper('.productpage__slider__container', {
 		bulletActiveClass: 'active',
 		clickable: true,
 	},
+	clickable: true
 	// noSwiping: true,
 	// noSwipingClass: "noswiping"
 })
@@ -285,3 +286,38 @@ orderresult__X.addEventListener('click', () => {
 if (showorderresult === true) {
 	orderresultToggler()
 }
+
+
+// zoom  modal
+const zoommodal = document.querySelector('.zoommodal')
+const zoommodal__bg = document.querySelector('.zoommodal__bg')
+const zoommodal__X = document.querySelector('.zoommodal__X')
+
+const zoommodalToggler = (show = true) => {
+	if (show) {
+		zoommodal__bg.classList.add('toggled')
+		zoommodal.classList.add('toggled')
+	} else {
+		zoommodal__bg.classList.remove('toggled')
+		zoommodal.classList.remove('toggled')
+	}
+}
+
+zoommodal__bg.addEventListener('click', () => {
+	zoommodalToggler(false)
+})
+zoommodal__X.addEventListener('click', () => {
+	zoommodalToggler(false)
+})
+// zoommodalToggler()
+
+// zoom functionality
+const zoommodal__imgbox__img = document.querySelector('.zoommodal__imgbox img')
+;[...document.querySelectorAll('.productpage__slider__slide img')].forEach(img => {
+	img.addEventListener('click', () => {
+		if (zoommodal__imgbox__img) {
+			zoommodal__imgbox__img.src = img.src
+			zoommodalToggler()
+		}
+	})
+})

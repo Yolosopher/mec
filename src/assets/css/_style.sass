@@ -387,3 +387,60 @@ $black28: #282828
 	font-family: firagosemibold
 	@include font(14px, 19.6px)
 	color: $dark
+
+
+.zoommodal
+	z-index: 100
+	position: fixed
+	top: 50%
+	background-color: #fff
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: none
+	flex-direction: column
+	align-items: center
+	width: calc(100% - 20px)
+	max-width: 690px
+	padding: 40px 20px
+	@include plus1025()
+		padding: 80px
+
+
+	&.toggled
+		display: flex
+	&__bg
+		position: fixed
+		z-index: 99
+		width: 100%
+		height: 100%
+		right: 0
+		top: 0
+		display: none
+		background-color: rgba($dark, .3)
+		&.toggled
+			display: block
+	&__X
+		position: absolute
+		top: 20px
+		right: 20px
+		width: 24px
+		height: 24px
+		z-index: 1
+		display: inline-block
+		cursor: pointer
+		&::after
+			content: url(../img/svgs/ordermodalx.svg)
+			display: inline-block
+			width: 24px
+			height: 24px
+	&__imgbox 
+		width: 100%
+		height: 100%
+		img
+			object-fit: contain
+			width: 100%
+			height: 100%
+.bigmodal
+	width: calc(100% - 20px)
+	max-width: 90%
+	height: 90vh

@@ -88,7 +88,7 @@ html(lang="en")
                     .hero__slider__container.swiper-container
                         .hero__slider__wrapper.swiper-wrapper
                             each slide, i in slides
-                                .hero__slider__slide.swiper-slide
+                                a.hero__slider__slide.swiper-slide(href="index.html") 
                                     img(src=slide, alt="")
                         .hero__slider__nav__left
                             span

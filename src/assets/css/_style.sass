@@ -9,7 +9,7 @@ body
 	background-color: $bodyBg
 	// min-height: 200vh
 	// @media screen and ( max-width: 1024px )
-		// padding-top: #{90px + 30px}
+		// padding-top: #{140px + 30px}
 i
 	display: inline-block
 	width: 16px
@@ -51,7 +51,7 @@ img
 .section
 	margin-bottom: 70px
 	@include plus1025()
-		margin-bottom: 90px
+		margin-bottom: 140px
 	&__header
 		display: flex
 		align-items: center
@@ -115,7 +115,7 @@ $imageSliderHeightMob: 400px
 .blogsarticle__title
 	margin-bottom: 30px
 	@include plus1025()
-		margin-bottom: 90px
+		margin-bottom: 140px
 
 $blogSliderHeight: 520px
 $blogSliderHeightMob: 420px
@@ -129,7 +129,7 @@ $blogSliderHeightMob: 420px
 	&__title
 		margin-bottom: 50px
 		@include plus1025()
-			margin-bottom: 90px
+			margin-bottom: 140px
 	&__descr
 		@include maxcolumn(4)
 		min-height: 76px
@@ -193,7 +193,7 @@ $black28: #282828
 	width: 100%
 	padding-bottom: 50px
 	@include plus1025()
-		padding-bottom: 90px
+		padding-bottom: 140px
 	&__headings
 		order: -1
 		max-width: 200px
@@ -321,6 +321,10 @@ $black28: #282828
 			height: 436px
 		&__left
 			height: 100%
+			@include plus1025()
+				display: flex
+				flex-direction: column
+				justify-content: center
 			.section__title
 				font-family: firagobook
 				font-weight: 400

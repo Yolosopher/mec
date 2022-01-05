@@ -8,17 +8,18 @@ window.addEventListener('load', () => {
 })
 
 // HERO SWIPER
-import Swiper, { Navigation, Pagination } from 'swiper'
-Swiper.use([Navigation, Pagination])
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper'
+Swiper.use([Navigation, Pagination, Autoplay])
 const heroSwiper = new Swiper('.hero__slider__container', {
 	slidesPerView: 1,
 	spaceBetween: 20,
 	// loop: [...document.querySelectorAll('.hero__slider__container .swiper-slide')].length > 2,
-	speed: 700,
-	// autoplay: {
-    //     disableOnInteraction: false,
-	// 	delay: 1000,
-	// },
+	speed: 600,
+	autoplay: {
+		disableOnInteraction: false,
+		delay: 3000,
+	},
+	// loop: true,
 	breakpoints: {
 		1025: {
 			centeredSlides: true,
@@ -31,6 +32,7 @@ const heroSwiper = new Swiper('.hero__slider__container', {
 		prevEl: '.hero__slider__nav__left',
 		disabledClass: 'disabled',
 	},
+	clickable: true,
 	pagination: {
 		el: '.hero__slider__pagination',
 		type: 'bullets',

@@ -171,7 +171,7 @@ html(lang="en")
                     .homecategory__slider__wrapper.swiper-wrapper
                         each product, i in products
                             .newproducts__list__item.swiper-slide
-                                .newproducts__list__item__imgbox
+                                a.newproducts__list__item__imgbox(href="product.html")
                                     img(src=product.image, alt=product.title)
                                 h3.newproducts__list__item__title=product.title
                                 p.newproducts__list__item__price

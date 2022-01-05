@@ -263,7 +263,7 @@
 	input, textarea
 		color: $dark
 		font-family: firagosemibold
-		@include font(18px, 25.2px)
+		@include font(16px, 25.2px)
 		@include uppercase()
 		display: inline-block
 		width: 100%
@@ -318,7 +318,7 @@
 		left: 0
 		color: $dark
 		font-family: firagosemibold
-		@include font(18px, 25.2px)
+		@include font(16px, 25.2px)
 		@include uppercase()
 		transition: .05s ease-out
 		opacity: 1
@@ -331,11 +331,13 @@
 	left: 50%
 	transform: translate(-50%, -50%)
 	max-width: 690px
-	padding: 20px
 	display: none
 	flex-direction: column
 	align-items: center
 	width: calc(100% - 20px)
+	padding: 40px 20px
+	@include plus1025()
+		padding: 80px
 	> *
 		max-width: 454px
 
@@ -396,11 +398,13 @@
 	left: 50%
 	transform: translate(-50%, -50%)
 	max-width: 690px
-	padding: 20px
 	display: none
 	flex-direction: column
 	align-items: center
 	width: calc(100% - 20px)
+	padding: 40px 20px
+	@include plus1025()
+		padding: 80px
 	> *
 		max-width: 454px
 

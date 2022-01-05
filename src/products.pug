@@ -124,7 +124,7 @@ html(lang="en")
                 ul.newproducts__list
                     each product, i in products
                         li.newproducts__list__item
-                            .newproducts__list__item__imgbox
+                            a.newproducts__list__item__imgbox(href="product.html")
                                 img(src=product.image, alt=product.title)
                             h3.newproducts__list__item__title=product.title
                             p.newproducts__list__item__price

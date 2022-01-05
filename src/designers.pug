@@ -55,7 +55,7 @@ html(lang="en")
                 ul.newproducts__list.designers__list
                     each designer, i in designers
                         li.newproducts__list__item.designers__item
-                            .newproducts__list__item__imgbox.designers__item__imgbox
+                            a.newproducts__list__item__imgbox.designers__item__imgbox(href="product.html") 
                                 img(src=designer.image, alt=designer.name)
                             h3.designers__innertitle.newproducts__list__item__title=designer.name
                             .designers__descr.default-ul
@@ -63,7 +63,7 @@ html(lang="en")
                             a.newproducts__list__item__link.btn(href="designer.html") დეტალურად ნახვა
                         if (i % 2 === 0)
                             li.newproducts__list__item.designers__item
-                                .newproducts__list__item__imgbox.designers__item__imgbox
+                                a.newproducts__list__item__imgbox.designers__item__imgbox(href="product.html") 
                                     img(src=designer.image, alt=designer.name)
                                 h3.designers__innertitle.newproducts__list__item__title=designer.name
                                 .designers__descr.default-ul

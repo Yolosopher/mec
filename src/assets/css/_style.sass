@@ -149,7 +149,10 @@ $blogSliderHeightMob: 420px
 	.designers__item
 		border-bottom-color: transparent !important
 		.designers__item__imgbox
-			height: 400px !important
+			height: 500px !important
+			@include plus1025()
+				height: 400px !important
+
 		&:nth-last-of-type(n+5)
 			border-bottom-color: $borderLight !important
 	+ .productsresult__controls

@@ -14,10 +14,10 @@ const heroSwiper = new Swiper('.hero__slider__container', {
 	slidesPerView: 1,
 	spaceBetween: 20,
 	// loop: [...document.querySelectorAll('.hero__slider__container .swiper-slide')].length > 2,
-	speed: 600,
+	speed: 700,
 	autoplay: {
 		disableOnInteraction: false,
-		delay: 3000,
+		delay: 6000,
 	},
 	// loop: true,
 	breakpoints: {

@@ -82,7 +82,7 @@ const updatePricer = (price) => {
 				if (option.dataset.price) {
 					updatePricer(option.dataset.price)
 				}
-				console.log(option.value)
+				// console.log(option.value)
 				if (select.id === 'size-select') {
 					setSizeId(option.value)
 					// size_id.value = option.value
